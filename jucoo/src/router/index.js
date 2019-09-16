@@ -1,22 +1,20 @@
 import React from "react"
-import TarBar from "../component/TarBar"
-import Login from "../views/Login"
+import MyJucco from "../views/MyJucco"
+import Eticket from "../views/Eticket"
+import Home from "../views/Home"
+import Theatre from "../views/Theatre"
 import {
-    BrowserRouter as Router,
-    Switch,
     Route
 } from "react-router-dom"
 class ComRouter extends React.Component{
     render(){
         return(
-            <div>
-                <Router>
-                    <Switch>
-                        <Route path={"/login"} component={Login}></Route>
-                        <Route path={"/"} component={TarBar}></Route>
-                    </Switch>
-                </Router>
-            </div>
+            <>
+                <Route path={"/"} exact component={Home}></Route>
+                <Route path={"/Theatre"} component={Theatre}></Route>
+                <Route path={"/Eticket"} component={Eticket}></Route>
+                <Route path={"/MyJucco"} component={MyJucco}></Route>
+            </>
         )
     }
 }
