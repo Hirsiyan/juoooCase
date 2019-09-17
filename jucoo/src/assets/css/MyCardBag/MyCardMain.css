@@ -1,0 +1,14 @@
+
+.main{
+    padding-top: 180px;
+    text-align: center;
+}
+.main img{
+    display: inline-block;
+    width: 3.33rem;
+}
+.main p{
+    color: #999999;
+    margin: .4rem;
+    font-size: 0.4rem;
+}
