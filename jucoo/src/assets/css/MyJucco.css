@@ -1,0 +1,101 @@
+*{
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+     outline: 0;
+}
+html,body{
+    width:100%;
+    height:100%;
+    background: #fefefe;
+    position: relative;
+}
+#root{
+    height:100%;
+}
+.mine{
+    height:100%;
+    background: #f5f5f5;
+    box-sizing: border-box;
+}
+.mine .mine_body{
+    border-bottom: 1.6rem;
+}
+.mine .mine-info{
+    height: 5.58667rem;
+    background: url(../images/下载.png) no-repeat;
+    background-size: 100%;
+    position: relative;
+    overflow: hidden;
+
+}
+.mine-info .ju-icon-setting1 {
+    position: absolute;
+    right: .4rem;
+    top: .4rem;
+    font-size: .48rem;
+    color: #fefefe;
+}
+.mine-info__main{
+    box-sizing: border-box;
+    height:100%;
+    margin: 1.5rem .4rem 0;
+    border-radius: 0.04rem;
+    background: #fff;
+}
+.mine-info__main__head{
+    padding:0 .4rem;
+    position: relative;
+}
+.mine-info_head_pic{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    border: .02667rem solid #fff;
+    margin-top: -.32rem;
+    margin-right: .26667rem;
+    background: #f5f5f5;
+    overflow: hidden;
+}
+.mine-info_userName{
+    position: absolute;
+    top:.333rem;
+    color:#232323;
+    font-size: .4rem;
+}
+.mine-info_main_label{
+    margin-top: -.09333rem;
+    overflow: hidden;
+    box-sizing: border-box
+}
+.mine-info_main_vip{
+    float: right;
+    font-size: .37333rem;
+    color: #454341;
+    font-weight: 700;
+    padding: .09333rem .28rem .09333rem .38667rem;
+    background: linear-gradient(-45deg,#f5dea9,#f8d583);
+    border-radius: .36rem 0 0 .36rem;
+}
+.mine-info_main_cnt{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.mine-info_main_cnt_item{
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-align: center;
+    position: relative;
+    padding: .4rem 0 .52rem;
+    color: #666;
+    font-weight: 500;
+    font-size: .32rem;
+}
+.mine-info_main_cnt_item_num{
+    color: #ff6743;
+    font-size: .53333rem;
+    margin-bottom: .2rem;
+}
