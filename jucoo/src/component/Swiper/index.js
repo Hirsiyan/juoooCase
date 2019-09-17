@@ -55,7 +55,7 @@ class SwpCom extends React.Component{
     }
 }
 function mapStateToProps(state){
-    console.log(state);
+    // console.log(state);
     return{
         swiperList:state.swiperList.swiperList
     }
