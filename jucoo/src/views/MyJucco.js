@@ -13,7 +13,7 @@ class MyJucco extends React.Component{
                                 </a>
                                 <div className={"mine-info__main"}>
                                     <div className={"mine-info__main__head"}>
-                                        <div class={"mine-info_head_pic"}>
+                                        <div className={"mine-info_head_pic"}>
                                             <img src="https://image.juooo.com/group1/M00/03/6F/rAoKNV0XF2uABEtSAAANUrP00o0602.png" alt=""/>
                                         </div>
                                         <span className={"mine-info_userName"}>账户</span>
