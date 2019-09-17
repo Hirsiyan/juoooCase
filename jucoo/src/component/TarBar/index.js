@@ -7,16 +7,28 @@ class TarBar extends React.Component{
             <div className={"tarbar-footer"}>
                 <div className={"tarbar-footer-div"}>
                     <div className={"tarbar-footer-div-div"}>
-                        <NavLink to={"/"}>首页</NavLink>
+                        <NavLink to={"/"}>
+                            <p className={"iconfont icon-index tarbar-footer-div-div-p"}></p>
+                            <p>首页</p>
+                        </NavLink>
                     </div>
                     <div className={"tarbar-footer-div-div"}>
-                        <NavLink to={"/Theatre"}>剧院</NavLink>
+                        <NavLink to={"/Theatre"}>
+                            <p className={"iconfont icon-juchangjuyuanxinxi tarbar-footer-div-div-p"}></p>
+                            <p>剧院</p>
+                        </NavLink>
                     </div>
                     <div className={"tarbar-footer-div-div"}>
-                        <NavLink to={"/Eticket"}>票夹</NavLink>
+                        <NavLink to={"/Eticket"}>
+                            <p className={"iconfont icon-piaojia28 tarbar-footer-div-div-p"}></p>
+                            <p>票夹</p>
+                        </NavLink>
                     </div>
                     <div className={"tarbar-footer-div-div"}>
-                        <NavLink to={"/MyJucco"}>我的</NavLink>
+                        <NavLink to={"/MyJucco"}>
+                            <p className={"iconfont icon-Icon_wode tarbar-footer-div-div-p"}></p>
+                            <p>我的</p>
+                        </NavLink>
                     </div>
                 </div>
             </div>

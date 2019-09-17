@@ -11,15 +11,15 @@ import {
 class App extends React.Component{
     render(){
         return(
-            <div className={"app"}>
-                <Router>
-                    <ComRouter></ComRouter>
-                    <Switch>
-                        <Route path={"/login"} component={Login}></Route>
-                        <Route path={"/"} component={TarBar}></Route>
-                    </Switch>
-                </Router>
-            </div>
+           <div className={"app"}>
+               <Router>
+                   <ComRouter></ComRouter>
+                   <Switch>
+                       <Route path={"/login"} component={Login}></Route>
+                       <Route path={"/"} component={TarBar}></Route>
+                   </Switch>
+               </Router>
+           </div>
         )
     }
 }

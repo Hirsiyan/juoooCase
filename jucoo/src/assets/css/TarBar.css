@@ -11,5 +11,8 @@
 .tarbar-footer-div-div{
     width:25%;
     text-align: center;
-    font-size:12px
+    font-size:12px;
+}
+.tarbar-footer-div-div-p{
+    margin-bottom:15px
 }
