@@ -1,0 +1,3 @@
+export default {
+    CHANGE_SWIPER_LIST:"CHANGE_SWIPER_LIST"
+}

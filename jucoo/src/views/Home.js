@@ -1,11 +1,14 @@
-import React from "react"
+import React from "react";
+import "../assets/css/Home.css";
+import SwpCom from "../component/Swiper"
 class Home extends React.Component{
     render(){
         return(
             <div>
-                <p>首页</p>
+                <SwpCom></SwpCom>
             </div>
         )
     }
 }
+
 export default Home;

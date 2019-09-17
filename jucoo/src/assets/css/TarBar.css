@@ -1,0 +1,18 @@
+.tarbar-footer{
+    width:100%;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+}
+.tarbar-footer-div{
+    display: flex;
+    justify-content: space-between;
+}
+.tarbar-footer-div-div{
+    width:25%;
+    text-align: center;
+    font-size:12px;
+}
+.tarbar-footer-div-div-p{
+    margin-bottom:15px
+}
