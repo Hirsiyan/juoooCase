@@ -9,8 +9,10 @@ import store from "./store"
 import "./assets/css/reset.css"
 import MyMoney from "./views/MyMoney";
  import Myintegral from "./views/Myintegral";
+import Ticket from "./views/Ticket"
+
  // ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
- ReactDOM.render(<MyMoney/>, document.getElementById('root'));
+ReactDOM.render(<Ticket />, document.getElementById('root'));
 //ReactDOM.render(<Myintegral/>, document.getElementById('root'));
 //
 // If you want your app to work offline and load faster, you can change
