@@ -9,12 +9,13 @@ import {
 class ComRouter extends React.Component{
     render(){
         return(
-            <>
+            <div>
                 <Route path={"/"} exact component={Home}></Route>
                 <Route path={"/Theatre"} component={Theatre}></Route>
                 <Route path={"/Eticket"} component={Eticket}></Route>
                 <Route path={"/MyJucco"} component={MyJucco}></Route>
-            </>
+            </div>
+
         )
     }
 }
