@@ -1,0 +1,102 @@
+.BuyCardMain-wrap{
+    overflow: auto;
+}
+.wrap{
+    height: 7rem;
+    background: #f5dea9;
+    margin-top: 1.5rem;
+    text-align: center;
+    border-bottom-right-radius:6.66667rem 1.3333rem;
+    border-bottom-left-radius:6.66667rem 1.3333rem;
+}
+.nav{
+    height: 4.567rem;
+    width: 100%;
+    padding: .66667rem .4rem;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.nav-bottom{
+    padding: 0.66667rem 0;
+}
+.entry-block__title{
+    width: 100%;
+    height: 0.582rem;
+    line-height: 0.729rem;
+
+}
+.entry-block__title h2{
+    font-size: .54rem;
+    display: inline-block;
+    font-weight: 900;
+    float: left;
+}
+.entry-block__title h6{
+    font-size: .37333rem;
+    padding-left: 20px;
+    display: inline-block;
+    float: left;
+}
+.entry-block__title span{
+    float: right;
+}
+.card-cell{
+    padding: .66667rem 0;
+    border-bottom: #ebebeb 2px solid;
+}
+.list{
+    border-top: #ebebeb 25px solid;
+    width: 100%;
+    padding: .66667rem  .4rem 0 .4rem;
+    box-sizing: border-box;
+}
+.list img{
+    height: 2.66667rem;
+    width: 4.26667rem;
+    vertical-align: top;
+}
+.list-right{
+    display: inline-block;
+    margin-left: 15.008px;
+
+}
+.list-right h3{
+    font-weight: 700;
+    font-size: .45333rem;
+    padding: .2rem 0;
+}
+.list-right p{
+    margin-top: 12px;
+    color: #999;
+    font-size: .32rem;
+    height: .64rem;
+    line-height: .64rem;
+}
+.list-right div{
+    margin-top: 12px;
+    height: .64rem;
+    line-height: .64rem;
+}
+.list-right div>:first-child{
+    color: #ff6743;
+    font-size: .42667rem;
+    font-weight: 700;
+}
+.list-right div>:last-child{
+    display: inline-block;
+    height: .45333rem;
+    background: rgba(255,129,0,.1);
+    border-radius: .08rem;
+    text-align: center;
+    line-height: .45333rem;
+    font-size: .32rem;
+    color: #d5a370;
+    padding-top: 1px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: .42667rem;
+}
+.font{
+    width: 100%;
+    height: 100px;
+}

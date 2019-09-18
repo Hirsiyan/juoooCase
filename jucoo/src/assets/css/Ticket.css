@@ -1,0 +1,174 @@
+.header{
+    height:460px;
+    width:100%;
+    background:red;
+}
+.header-top{
+    height:1.18667rem;
+    width:100%;
+    /*background:green;*/
+    font-size:.48rem;
+    font-weight:700;
+    color:#fff;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-top i{
+    display:inline-block;
+    font-size:.6rem;
+    margin:0 14px;
+}
+.header-main{
+    width:100%;
+    height:370px;
+    /*background:#00a8e6;*/
+
+}
+.header-main img{
+    display:inline-block;
+    width:2.93333rem;
+    height:4rem;
+    /*background:#00AAAA;*/
+    float:left;
+    margin:20px 20px;
+}
+.header-main-details{
+    float:left;
+    width:6rem;
+    /*background:#0E0EFF;*/
+    height:4rem;
+    margin:20px 0;
+}
+.header-main-details-title{
+    font-size: .50667rem;
+    width:100%;
+    height:3rem;
+    font-weight: 700;
+    color: #fefefe;
+    padding:0 9px;
+}
+.header-main-details-price{
+    color:#fff;
+    font-weight:700;
+    margin-right:10px;
+}
+.header-main-details-btn{
+    display:inline-block;
+    background-color: rgba(0,0,0,.5);
+    border:1px solid #fff;
+    width:.6rem;
+    height:.46rem;
+    text-align:center
+}
+.brief-secondary{
+    width:100%;
+    height:240px;
+    /*background:#b1dfbb;*/
+    margin:0 5px 15px 5px;
+}
+.brief-secondary-left{
+    width:8.5rem;
+    height:200px;
+    /*background:#b1b1b1;*/
+    float:left;
+}
+.brief-secondary-left p{
+    font-size:30px;
+    font-weight:700;
+    margin:30px 0 7px 30px;
+    line-height:80px;
+}
+.brief-secondary-left h2{
+    font-size:30px;
+    font-weight:700;
+    margin-left:30px;
+}
+.brief-secondary-right{
+    width:1.5rem;
+    height:200px;
+    /*background:#b3d4fc;*/
+    float:left;
+    padding-top:110px;
+}
+.brief-secondary-right i{
+    display:inline-block;
+    font-size:160px;
+    border-radius: 45%;
+    background:#e1e1e1;
+    background-image: url(../images/dz.png) ;
+    background-repeat: no-repeat;
+    background-size: 0.6rem 0.7rem;
+    background-position: 50%;
+    height:1.06667rem;
+    width:1.06667rem;
+    text-align:center;
+    line-height:210px;
+}
+.detail-plus-tips{
+    width:100%;
+    height:140px;
+   background:#b5bd68;
+    margin-bottom: 25px;
+}
+.orange-plus-tips{
+    width:90%;
+    height:100px;
+    border-radius: .2rem;
+    margin:0 5%;
+    background:#000;
+    color:#f5dea9;
+    line-height:100px;
+
+}
+.orange-plus-tips p{
+    font-size:28px;
+}
+.orange-plus-tips span{
+    border:1px solid #f5dea9;
+    color:#000;
+    background:#f5dea9;
+    margin-left:30px;
+    padding:4px;
+    font-size:16px;
+    margin-right:25px;
+}
+.orange-plus-tips i{
+    font-size:22px;
+    margin-left:60px;
+}
+.detail-schedule{
+    width:100%;
+    background:#b3d4fc;
+    padding:0 30px;
+    font-size:.34667rem;
+}
+.detail-schedule-discount{
+    padding:.4rem;
+    color:#999;
+    font-size:.34667rem;
+}
+.detail-schedule-discount span{
+    margin-left:150px;
+}
+.detail-schedule-discount i{
+    margin:0 20px;
+    background-image: url(../images/zk.png) ;
+    background-repeat: no-repeat;
+    background-size: 2.6rem 100%;
+    padding:8px 15px;
+}
+.detail-schedule-vip{
+    padding:.4rem;
+    color:#999;
+    font-size:.34667rem;
+}
+.detail-schedule-vip i{
+    color:red;
+    margin:0 5px;
+}
+.detail-schedule-admission{
+    padding:.4rem;
+    color:#999;
+    font-size:.34667rem;
+}

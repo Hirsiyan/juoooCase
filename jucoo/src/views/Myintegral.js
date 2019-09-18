@@ -1,5 +1,6 @@
 import React from 'react'
 import "../assets/css/Myintegral.css"
+import "../assets/fonts/iconfont.css"
 class Myintegral extends React.Component{
     render() {
         return(
