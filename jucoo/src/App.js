@@ -14,11 +14,11 @@ class App extends React.Component{
         return(
            <div className={"app"}>
                <Router>
-                   <ComRouter></ComRouter>
+                   {/*<ComRouter></ComRouter>*/}
                    <Switch>
-                       {/*<Route path={"/"} component={MyCardBag}></Route>*/}
-                       <Route path={"/login"} component={Login}></Route>
-                       <Route path={"/"} component={TarBar}></Route>
+                       <Route path={"/"} component={MyCardBag}></Route>
+                       {/*<Route path={"/login"} component={Login}></Route>*/}
+                       {/*<Route path={"/"} component={TarBar}></Route>*/}
                    </Switch>
                </Router>
            </div>
