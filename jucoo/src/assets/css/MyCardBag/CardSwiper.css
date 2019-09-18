@@ -1,0 +1,23 @@
+.swiper-list{
+    width:100%;
+    height:380px;
+    background:red;
+    position:relative;
+}
+.swiper-list-postion-son-c img{
+    width:100%;
+    height:100%;
+}
+.swiper-container{
+    position:relative;
+    width:100%;
+    height:380px;
+}
+.swiper-container-img{
+    width:100%;
+    height:100%;
+}
+.swiper-pagination{
+    padding-top: 40px;
+    width: 100%;
+}
