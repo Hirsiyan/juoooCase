@@ -1,0 +1,75 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app{
+    width:100%;
+    height:100%
+}
+.title{
+    height: 1.17rem;
+    width: 100%;
+    background-color: #fff;
+    font-size: .48rem;
+    color: #232323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ebebeb;
+    padding: 0 15px 0 15px;
+}
+.title span{
+    font-size:.5rem;
+}
+.card{
+    margin: .4rem .70667rem .66667rem;
+}
+.van{
+    overflow: hidden;
+}
+.card_cover{
+    position: relative;
+    height:339px;
+    background-image: url(../images/family-card-bg.png);
+    background-size: 8.6rem 4.5rem;
+}
+.card_mary{
+    font-size: .53333rem;
+    font-weight: 700;
+    color: #fff;
+    display: inline-block;
+    padding-top: 30px;
+    margin-left: 30px;
+}
+.card_secondary{
+    display: inline-block;
+    background: hsla(0,0%,100%,.16);
+    border-radius: .05333rem;
+    font-size: .26667rem;
+    color: #f0f0f0;
+    padding-top: 1px;
+    box-sizing: border-box;
+    width: .8rem;
+    height: .42667rem;
+    line-height: .42667rem;
+    margin-left: .26667rem;
+    text-align: center;
+}
+.card_price{
+    font-size: .66667rem;
+    font-weight: 700;
+    color: #fff;
+    padding-top: 200px;
+    margin-left: 30px;
+    flex-grow: 1;
+}
+.card_date{
+    font-size: .32rem;
+    color: #fff;
+    margin-left: 450px;
+   position: absolute;
+   top:3.5rem;
+
+
+}
