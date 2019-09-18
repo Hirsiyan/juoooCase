@@ -1,5 +1,5 @@
 import React from "react"
-import RouteCard from "../../router/MyCardBag";
+import RouteCard from "../../component/MyCardBag";
 class MyCardBag extends React.Component{
     render(){
         return(
