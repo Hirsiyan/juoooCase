@@ -15,7 +15,9 @@ class SwpCom extends React.Component{
                     <div className={"swiper-list-postion"}>
                         <div className={"swiper-list-postion-son"}>
                             <div className={"swiper-list-postion-son-a"}>
-                                全国
+                                <Link to={"/SelectCity"}>
+                                    全国
+                                </Link>
                             </div>
                             <div className={"swiper-list-postion-son-b"}>
                                 搜索热门演出

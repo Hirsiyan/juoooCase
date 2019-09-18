@@ -6,5 +6,5 @@ module.exports = function(app){
         pathRewrite:{
             "^/juooo":""
         }
-    }))
+    }));
 };

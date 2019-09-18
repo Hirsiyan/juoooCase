@@ -1,7 +1,11 @@
 import React from "react"
 import "../assets/css/Integral.css"
 import "../assets/fonts/iconfont.css"
+import axios from "axios"
 class Integral extends React.Component{
+    constructor(){
+        super();
+    }
     render() {
         return(
             <div className="views">
@@ -16,7 +20,6 @@ class Integral extends React.Component{
                         </div>
                     </div>
                 </div>
-
             </div>
 
         )
