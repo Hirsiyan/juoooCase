@@ -8,12 +8,15 @@ body,html{
     height:100%
 }
 .title{
+    /*position: fixed;*/
+
     height: 1.17rem;
     width: 100%;
     background-color: #fff;
     font-size: .48rem;
     color: #232323;
     display: flex;
+    z-index: 100;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #ebebeb;
@@ -60,7 +63,7 @@ body,html{
     font-size: .66667rem;
     font-weight: 700;
     color: #fff;
-    padding-top: 200px;
+    padding-top: 170px;
     margin-left: 30px;
     flex-grow: 1;
 }
@@ -68,8 +71,181 @@ body,html{
     font-size: .32rem;
     color: #fff;
     margin-left: 450px;
-   position: absolute;
-   top:3.5rem;
-
+    position: absolute;
+    top:3.5rem;
+}
+.buy_card{
+    padding: 0 .81333rem;
+}
+.card_button{
+    display: block;
+    width: 100%;
+    height: 1.2rem;
+    border-radius: .6rem;
+    color: #fff;
+    font-size: .42667rem;
+    font-weight: 700;
+    border: none;
+    background: linear-gradient(90deg, rgb(231, 169, 60) 0%, rgb(243, 186, 87) 100%);
+}
+.tips{
+    margin-top: .21333rem;
+    margin-bottom: .49333rem;
+    color: #242424;
+    font-size: .37333rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tip_money{
+    font-size: .37333rem;
+    color:#ee9900;
+ }
+.tip_rule{
+    font-size: .2rem;
+    margin-left: 15px;
+    color: #7e8c8d;
+}
+.entry_block{
+    width: 100%;
+    background-color: #fff;
+    padding: .66667rem .4rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.entry_block_title{
+    padding-bottom: .53333rem;
+    height: .72rem;
+    line-height: .72rem;
+    color: #232323;
+    font-size: .53333rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+.entry-block__title__desc{
+    font-size: .37333rem;
+    color: #666;
+    font-weight: 400;
+    flex: 1;
+    margin-left: .26667rem;
+}
+.schedule{
+    padding-top: .13333rem;
+    background: white;
+ }
+.cell{
+    padding-bottom: .88rem;
+}
+.item{
+    display: flex;
+    height: 4rem;
+    padding: 0 30px 0 30px;
+}
+.item_cover{
+    width: 2.93333rem;
+    height: 4rem;
+    flex-shrink: 0;
 
 }
+.item_cover img{
+    width: 2.93333rem;
+    height: 4rem;
+}
+.item_info{
+    width: 5.93333rem;
+    margin-left: .38667rem;
+
+}
+.item_info_date-week{
+    height: 50px;
+    margin-top: .21333rem;
+    color: #232323;
+}
+.item__info__name{
+    align-items: center;
+    flex-wrap: wrap;
+    height: 2.02667rem;
+}
+.item__info__place{
+    font-size: .32rem;
+    color: #666;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 5.86667rem;
+    height: .32rem;
+    line-height: .32rem;
+
+}
+.item__info__name_double{
+    font-size: .45333rem;
+    font-weight: 700;
+    color: #232323;
+    line-height: .61333rem;
+    height: 1.22667rem;
+    overflow: hidden;
+    padding-top: 8px;
+}
+.cell__ratio{
+    width:120px;
+    height:50px;
+    left: 3.26667rem;
+    bottom: 1.05333rem;
+}
+.cell__ratio__value{
+    color: #ff6743;
+    font-size: .32rem;
+}
+.cell__ratio__value-desc{
+    color: #999;
+    font-size: .58667rem;
+    margin-left: .14667rem;
+    transform: scale(.5);
+    transform-origin: 0 85%;
+    display: inline-block;
+}
+.schedule__more-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.schedule__more-wrapper__button{
+    border: 2px solid #ff6743;
+    color: #ff6743;
+    width: 4.24rem;
+    height: .96rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: .4rem;
+    border-radius: .16rem;
+    background: #fff;
+    margin-bottom: 180px;
+}
+a{
+    text-decoration:none;
+}
+.ju_button{
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    border: none;
+    padding: 0 .4rem;
+    width: 100%;
+    height: 1.30667rem;
+    font-size: .45333rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgb(231, 169, 60) 0%, rgb(243, 186, 87) 100%);
+    margin-top: 80px;
+
+}
+/*.bottom{*/
+/*    !*position: fixed;*!*/
+/*    z-index: 10;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*}*/
+
+
+

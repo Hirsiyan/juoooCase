@@ -3,7 +3,7 @@ import "../assets/css/Login.css"
 class Login extends React.Component{
     render(){
         return(
-            <div>
+            <div style={{backgroundColor:"white",backgroundImage:'url("https://m.juooo.com/public/basic/Home/app/app-juooo5/images/login/login_bg.png")',backgroundSize:'cover'}}>
                 <div className={"navbar"}>
                     <span className={"iconfont icon-fanhui"} onClick={()=>{
                         const goUrl = this.props.history.location.state.goUrl;

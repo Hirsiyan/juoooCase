@@ -1,7 +1,5 @@
 import React from "react"
 import "../assets/css/Integral.css"
-import "../assets/fonts/iconfont.css"
-import axios from "axios"
 class Integral extends React.Component{
     render() {
         return(
@@ -22,7 +20,7 @@ class Integral extends React.Component{
         )
     }
     async getData(){
-        const {data} = await axios.post("/juooo/Scores/getAllScoresList");
+        const data = await axios.post("/juooo/Scores/getAllScoresList");
         console.log(data);
     }
     componentDidMount() {

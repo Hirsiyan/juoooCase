@@ -3,6 +3,8 @@
     position:fixed;
     bottom:0px;
     left:0px;
+    background:white;
+    z-index:1;
 }
 .tarbar-footer-div{
     display: flex;

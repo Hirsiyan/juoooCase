@@ -1,8 +1,6 @@
 import React from "react"
 import "../assets/css/MyJucco.css"
-import {
-    Link,
-} from 'react-router-dom'
+import {Link} from "react-router-dom"
 class MyJucco extends React.Component{
     render(){
         return(

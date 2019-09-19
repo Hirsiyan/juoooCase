@@ -3,6 +3,7 @@ import {bindActionCreators} from "redux"
 import {connect} from "react-redux"
 import theatreActionCreators from "../store/actionCreators/theatre"
 import "../assets/css/Theatre.css"
+import Swiper from "swiper/dist/js/swiper.js";
 class Theatre extends React.Component{
     render(){
         const theatreList = this.props.theatreList;
@@ -29,14 +30,23 @@ class Theatre extends React.Component{
                                             <span className={"iconfont icon-sangedian"}></span>
                                         </div>
                                     </div>
-                                    <div className={"theatre-list-son-2"}>
-                                        <div>
-                                            <ul className="time-horizontal">
-                                                <li><b></b>成立</li>
-                                                <li><b></b>合作</li>
-                                                <li><b></b>发展</li>
-                                                <li><b></b>共赢</li>
-                                            </ul>
+                                    <div className="swiper-container">
+                                        <div className="swiper-wrapper">
+                                            {
+                                                v.showList.map((p,i)=>(
+                                                    <div className="swiper-slide swiper-slide-div1" key={i}>
+                                                        <div className={"swiper-slide-div1-div1"}>
+                                                            <p>{p.show_time}</p>
+                                                            <span className={"swiper-slide-div1-span"}></span>
+                                                        </div>
+                                                        <div className="swiper-slide-div1-div2">
+                                                            <div className="swiper-slide-div1-div2a">
+                                                                <img className="swiper-slide-div1-div2a-img" src={p.pic} alt=""/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                ))
+                                            }
                                         </div>
                                     </div>
                                 </div>
@@ -48,6 +58,12 @@ class Theatre extends React.Component{
         )
     }
     componentDidMount(){
+        const mySwiper = new Swiper('.swiper-container', {
+            observer:true,
+            observeParents:true,
+            slidesPerView : 3,
+            paginationClickable: true,
+        });
         this.props.getTheatreList();
     }
 }
