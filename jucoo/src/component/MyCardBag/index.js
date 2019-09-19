@@ -1,5 +1,8 @@
 import React from "react"
+<<<<<<< HEAD:jucoo/src/router/MyCardBag/index.js
+=======
 import "../../assets/css/reset.css"
+>>>>>>> b4c644a26d76ccc08626392745a00e9a7242ddd7:jucoo/src/component/MyCardBag/index.js
 import "../../assets/css/MyCardBag/MyCardBag.css"
 import {
     NavLink,

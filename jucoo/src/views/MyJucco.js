@@ -1,6 +1,8 @@
 import React from "react"
 import "../assets/css/MyJucco.css"
-import "../assets/fonts/iconfont.css"
+import {
+    Link,
+} from 'react-router-dom'
 class MyJucco extends React.Component{
     render(){
         return(
@@ -24,33 +26,38 @@ class MyJucco extends React.Component{
                                         <p className={"mine-info_main_vip"}>普通会员</p>
                                     </div>
                                     <div className={"mine-info_main_cnt"}>
-                                        <a href="" className={"mine-info_main_cnt_item"}>
+                                        <Link to={"/mymoney"} className={"mine-info_main_cnt_item"}>
+                                                    <p className={"mine-info_main_cnt_item_num"}>
+                                                        0
+                                                    </p>
+                                                    <p className={"mine-info_main_cnt_item_name"}>
+                                                        账户余额
+                                                    </p>
+                                                    <div className={"separator"}></div>
+                                        </Link>
+                                        <Link to={"/myintegral"} className={"mine-info_main_cnt_item"}>
                                             <p className={"mine-info_main_cnt_item_num"}>
-                                                0
-                                            </p>
-                                            <p className={"mine-info_main_cnt_item_name"}>
-                                                账户余额
-                                            </p>
-                                            <div className={"separator"}></div>
-                                        </a>
-                                        <a href="" className={"mine-info_main_cnt_item"}>
-                                            <p className={"mine-info_main_cnt_item_num"}>
-                                                6
-                                            </p>
+                                            6
+                                             </p>
                                             <p className={"mine-info_main_cnt_item_name"}>
                                                 积分
                                             </p>
                                             <div className={"separator"}></div>
-                                        </a>
-                                        <a href="" className={"mine-info_main_cnt_item"}>
+                                        </Link>
+
+                                        <Link to={"/couponExchange"} className={"mine-info_main_cnt_item"}>
                                             <p className={"mine-info_main_cnt_item_num"}>0</p>
                                             <p className={"mine-info_main_cnt_item_name"}>优惠券</p>
                                             <div className={"separator"}></div>
-                                        </a>
-                                        <a href="" className={"mine-info_main_cnt_item"}>
-                                            <p className={"mine-info_main_cnt_item_num no"}>立即开通</p>
-                                            <p className={"mine-info_main_cnt_item_name"}>橙PLUS卡</p>
-                                        </a>
+                                        </Link>
+
+
+                                       <Link to={"/plus"} className={"mine-info_main_cnt_item"}>
+                                           <p className={"mine-info_main_cnt_item_num no"}>立即开通</p>
+                                           <p className={"mine-info_main_cnt_item_name"}>橙PLUS卡</p>
+                                       </Link>
+
+
                                     </div>
                                 </div>
                             </div>
