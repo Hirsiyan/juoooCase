@@ -1,5 +1,4 @@
 import React from "react"
-import "../../assets/css/MyCardBag/reset.css"
 import "../../assets/css/MyCardBag/MyCardBag.css"
 import {
     NavLink,

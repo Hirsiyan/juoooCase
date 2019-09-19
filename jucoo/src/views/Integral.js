@@ -1,6 +1,5 @@
 import React from "react"
 import "../assets/css/Integral.css"
-import "../assets/fonts/iconfont.css"
 class Integral extends React.Component{
     render() {
         return(

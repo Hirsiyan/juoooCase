@@ -1,6 +1,5 @@
 import React from "react"
 import "../assets/css/MyJucco.css"
-import "../assets/fonts/iconfont.css"
 class MyJucco extends React.Component{
     render(){
         return(

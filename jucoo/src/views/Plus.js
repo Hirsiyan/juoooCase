@@ -1,6 +1,5 @@
 import React from "react";
 import "../assets/css/Plus.css"
-import "../assets/fonts/iconfont.css"
 class Plus extends React.Component {
     render() {
         return (

@@ -1,5 +1,4 @@
 import React from "react"
-import '../../assets/css/MyCardBag/reset.css'
 import '../../assets/css/MyCardBag/MyCardMain.css'
 
 class MyCardMain extends React.Component{

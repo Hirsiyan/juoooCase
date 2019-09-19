@@ -1,5 +1,4 @@
 import React from "react"
-import "../../assets/css/MyCardBag/reset.css"
 import "../../assets/css/MyCardBag/CardSon.css"
 import Menu from "./menu";
 import GetBack from "./getBack";

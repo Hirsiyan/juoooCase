@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../assets/css/MyCardBag/reset.css'
 import '../../assets/css/MyCardBag/BuyCardMain.css'
 import axios from 'axios'
 class BuyCardMain extends React.Component{

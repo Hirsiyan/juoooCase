@@ -1,6 +1,5 @@
 import React from "react"
 import "../assets/css/MyMoney.css"
-import "../assets/fonts/iconfont.css"
 class MyMoney extends React.Component{
     render() {
         return(

@@ -7,11 +7,9 @@ import 'lib-flexible';
 import {Provider} from "react-redux"
 import store from "./store"
 import "./assets/css/reset.css"
-import MyMoney from "./views/MyMoney";
- import Myintegral from "./views/Myintegral";
-import Ticket from "./views/Ticket"
-
+import "swiper/dist/css/swiper.min.css";
  ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
+
 // ReactDOM.render(<Ticket />, document.getElementById('root'));
 //ReactDOM.render(<Myintegral/>, document.getElementById('root'));
 //

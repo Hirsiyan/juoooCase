@@ -1,3 +1,6 @@
 export default {
-    swiperList:[]
+    swiperList:[],
+    superList:[],
+    hotList:[],
+    repeatList:[]
 }

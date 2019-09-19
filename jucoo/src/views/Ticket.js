@@ -1,6 +1,5 @@
 import React from "react"
 import '../assets/css/Ticket.css'
-import  '../assets/static/iconfont.css'
 import axios from 'axios';
 import Tools from '../common/Tools'
 class Ticket extends React.Component{
