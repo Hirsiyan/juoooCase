@@ -22,7 +22,7 @@ class Integral extends React.Component{
         )
     }
     async getData(){
-        const {data} = await axios.post("/juooo/Scores/getAllScoresList");
+        const data = await axios.post("/juooo/Scores/getAllScoresList");
         console.log(data);
     }
     componentDidMount() {
