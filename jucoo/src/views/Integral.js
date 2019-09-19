@@ -5,7 +5,7 @@ class Integral extends React.Component{
         return(
             <div className="views">
                 <div className="nav1">
-                    <div className="nav-inner">
+                    <div className="nav-inter">
                         <div className="left">
                             <span className="icon-menu-left iconfont">&#xe603;</span>
                         </div>
@@ -15,10 +15,16 @@ class Integral extends React.Component{
                         </div>
                     </div>
                 </div>
-
             </div>
 
         )
+    }
+    async getData(){
+        const data = await axios.post("/juooo/Scores/getAllScoresList");
+        console.log(data);
+    }
+    componentDidMount() {
+        this.getData();
     }
 }
 export default Integral;

@@ -5,7 +5,7 @@ class Plus extends React.Component {
         return (
             <div className="Plus">
 
-                <div className="header">
+                <div className="header-wrap">
                     <span className="iconfont icon-jiantou-copy"></span>
                     <span>橙PLUS卡</span>
                     <span className="iconfont icon-gengduo"></span>

@@ -10,8 +10,8 @@ export default {
     getTypeList(){
         return async (dispatch)=>{
             const data = await axios.get("/juooo/home/index/getFloorShow?city_id=0&version=6.0.5&referer=2");
-            console.log(data.data.data);
-            // dispatch(changeTypeList(data.data.data))
+            // console.log(data.data.data);
+            dispatch(changeTypeList(data.data.data))
         }
     }
 }

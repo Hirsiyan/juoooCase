@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 *{
     padding:0;
     margin: 0;
@@ -7,8 +9,6 @@
 }
 html,body{
     position: relative;
-    overflow-x: hidden;
-    overflow-y: hidden;
     height: 100%;
 }
 .views{
@@ -119,10 +119,9 @@ html,body{
 .navTop .dian{
     font-size:66px;
 }
+>>>>>>> 9751445e5cf321a5f872b9d7bb3a960de1bc1e39
 .pages{
     position: relative;
-    overflow-x: hidden;
-    overflow-y: auto;
     width: 100%;
     height: 100%;
 }
@@ -165,11 +164,6 @@ html,body{
 .part {
     color: #999;
     background: #f6f6f6;
-}
-.part .little {
-    margin-left:24px;
-    font-size: 25px;
-    line-height:88px;
 }
 .integral-list {
     overflow-y: scroll;
