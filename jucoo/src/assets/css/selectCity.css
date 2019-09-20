@@ -114,3 +114,28 @@
     color: #232323;
     border-bottom: 1px solid #ebebeb;
 }
+.city .city-nav{
+    position: fixed;
+    right: .26667rem;
+    top: 3.17333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.city .city-nav__lab{
+    font-size: .26667rem;
+    color: #666;
+    margin-bottom: .08rem;
+    width: 100%;
+    text-align: center;
+}
+

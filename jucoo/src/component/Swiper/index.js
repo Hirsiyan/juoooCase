@@ -4,7 +4,7 @@ import Swiper from "swiper/dist/js/swiper.js";
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import swiperListActions from "../../store/actionCreators/swiper"
-import {Link} from "react-router-dom"
+import {Link,withRouter} from "react-router-dom"
 class SwpCom extends React.Component{
     constructor(props) {
         super(props);
@@ -19,11 +19,11 @@ class SwpCom extends React.Component{
                 <div className={"swiper-list"}>
                     <div className={"swiper-list-postion"}>
                         <div className={"swiper-list-postion-son"}>
-                            <div className={"swiper-list-postion-son-a"}>
-                                <Link to={"/SelectCity"}>
-                                    全国
-                                </Link>
+                            <div className={"swiper-list-postion-son-a"} onClick={()=>{
+                                this.props.history.push("/SelectCity")
+                            }}>
                                 <span className={"iconfont icon-location"}></span>
+                                {localStorage.name?JSON.parse(localStorage.name).name:JSON.parse(localStorage.China)}
                             </div>
                             <div className={"swiper-list-postion-son-b"}>
                                 <span className={"iconfont icon-xingtaiduICON_sousuo--"}></span>搜索热门演出
@@ -68,4 +68,4 @@ function mapStateToProps(state){
         swiperList:state.swiperList.swiperList
     }
 }
-export default connect(mapStateToProps,dispatch=>bindActionCreators(swiperListActions,dispatch))(SwpCom);
+export default withRouter(connect(mapStateToProps,dispatch=>bindActionCreators(swiperListActions,dispatch))(SwpCom));

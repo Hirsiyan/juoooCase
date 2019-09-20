@@ -10,7 +10,7 @@ class MyMoney extends React.Component{
                             <div className="navTop-inner">
                                 <div className="left">
                                     <a href="javascript:;">
-                                     <span className="icon iconfont">
+                                     <span className="icon iconfont"onClick={()=>{this.props.history.go(-1)}}>
                                           &#xe603;
                                      </span>
                                     </a>
