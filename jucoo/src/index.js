@@ -6,11 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import 'lib-flexible';
 import {Provider} from "react-redux"
 import store from "./store"
-import MyMoney from "./views/MyMoney";
-import Myintegral from "./views/Myintegral";
 import Ticket from "./views/Ticket"
-// import Integral from "./views/Integral";
-// import App1 from './App1';
+import "./assets/css/reset.css"
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));
 // ReactDOM.render(<Ticket />, document.getElementById('root'));
 //ReactDOM.render(<Myintegral/>, document.getElementById('root'));

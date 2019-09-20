@@ -7,7 +7,13 @@ import {bindActionCreators} from "redux"
 import swiperListActions from "../../store/actionCreators/swiper"
 import {Link} from "react-router-dom"
 class SwpCom extends React.Component{
+    constructor(props) {
+        super(props);
+
+    }
+
     render(){
+        console.log(this.props);
         const swiperList = this.props.swiperList;
         return(
             <div>
@@ -17,6 +23,7 @@ class SwpCom extends React.Component{
                             <div className={"swiper-list-postion-son-a"}>
                                 <Link to={"/SelectCity"}>
                                     全国
+                                    {/*{this.props.location.query.name}*/}
                                 </Link>
                             </div>
                             <div className={"swiper-list-postion-son-b"}>

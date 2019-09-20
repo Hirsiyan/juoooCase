@@ -19,7 +19,8 @@ class App extends React.Component{
         return(
            <div className={"app"}>
                <Router>
-                   {/*<ComRouter></ComRouter>*/}
+
+                   <ComRouter></ComRouter>
                    <Switch>
                        <Route path={"/SelectCity"} component={SelectCity}></Route>
                        <Route path={"/plus"} component={Plus}></Route>
