@@ -7,9 +7,7 @@ class App1 extends React.Component{
             <div>
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
-                        <div className="swiper-slide">slider1</div>
-                        <div className="swiper-slide">slider2</div>
-                        <div className="swiper-slide">slider3</div>
+                        <div className="swiper-slide" data-history="slide1">Slide 1</div>
                     </div>
                 </div>
             </div>
@@ -17,7 +15,7 @@ class App1 extends React.Component{
     }
     componentDidMount() {
         var mySwiper = new Swiper('.swiper-container', {
-            autoplay: true,//可选选项，自动滑动
+            autoplay:true,//可选选项，自动滑动
         })
     }
 }
