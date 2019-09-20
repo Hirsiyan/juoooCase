@@ -1,5 +1,4 @@
 import React from "react";
-import "../assets/css/Home.css";
 import SwpCom from "../component/Swiper"
 import Super from "../component/Super"
 import Vip from "../component/Vip"

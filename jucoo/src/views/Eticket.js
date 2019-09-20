@@ -1,6 +1,5 @@
 import React from "react"
 import {withRouter} from "react-router-dom"
-import "../assets/css/Eticket.css"
 class Eticket extends React.Component{
     render(){
         return(
@@ -26,7 +25,7 @@ class Eticket extends React.Component{
     componentWillMount(){
         console.log(this.props);
         // 如果不存在token，跳转到login页面
-        if(!localStorage.token){
+        if(!localStorage.phone){
             this.props.history.push({
                 pathname:"/login",
                 state:{

@@ -2,7 +2,6 @@ import React from "react"
 import {bindActionCreators} from "redux"
 import {connect} from "react-redux"
 import theatreActionCreators from "../store/actionCreators/theatre"
-import "../assets/css/Theatre.css"
 import Swiper from "swiper/dist/js/swiper.js";
 class Theatre extends React.Component{
     render(){
@@ -70,7 +69,6 @@ class Theatre extends React.Component{
     }
 }
 function mapStateToProps(state){
-    console.log(state);
     return{
         theatreList:state.theatre.theatreList
     }
