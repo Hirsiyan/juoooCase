@@ -21,7 +21,7 @@ class App extends React.Component{
                <Router>
                    <ComRouter></ComRouter>
                    <Switch>
-                       {/*<Route path={"/SelectCity"} component={SelectCity}></Route>*/}
+                       <Route path={"/SelectCity"} component={SelectCity}></Route>
                        {/*<Route path={"/plus"} component={Plus}></Route>*/}
                        {/*<Route path={"/couponExchange"} component={CouponExchange}></Route>*/}
                        {/*<Route path={"/myintegral"} component={Myintegral}></Route>*/}

@@ -1,0 +1,3 @@
+export default {
+    CHANGE_RECOMMEND_LIST:"CHANGE_RECOMMEND_LIST"
+}

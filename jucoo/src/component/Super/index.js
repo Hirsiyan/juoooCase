@@ -52,7 +52,6 @@ class Super extends React.Component{
     }
 }
 function mapStateToProps(state){
-    console.log(state);
     return {
         superList:state.swiperList.superList
     }

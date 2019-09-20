@@ -58,12 +58,14 @@ class Theatre extends React.Component{
         )
     }
     componentDidMount(){
-        const mySwiper = new Swiper('.swiper-container', {
-            observer:true,
-            observeParents:true,
-            slidesPerView : 3,
-            paginationClickable: true,
-        });
+        if(this.props.theatreList.length>0){
+            const mySwiper = new Swiper('.swiper-container', {
+                observer:true,
+                observeParents:true,
+                slidesPerView : 3,
+                paginationClickable: true,
+            });
+        }
         this.props.getTheatreList();
     }
 }

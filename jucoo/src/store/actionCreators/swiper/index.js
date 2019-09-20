@@ -35,7 +35,7 @@ export default {
     getSuperList(){
         return async (dispatch)=>{
             const data = await axios.get("/juooo/vip/index/getVipHomeSchedular?version=6.0.5&referer=2");
-            // console.log(data.data.data.priorList)
+            console.log(data.data.data.priorList);
             dispatch(changeSuperList(data.data.data.priorList))
         }
     },
