@@ -19,7 +19,6 @@ class App extends React.Component{
         return(
            <div className={"app"}>
                <Router>
-
                    <ComRouter></ComRouter>
                    <Switch>
                        <Route path={"/SelectCity"} component={SelectCity}></Route>
@@ -27,11 +26,9 @@ class App extends React.Component{
                        <Route path={"/couponExchange"} component={CouponExchange}></Route>
                        <Route path={"/myintegral"} component={Myintegral}></Route>
                        <Route path={"/myMoney"} component={MyMoney}></Route>
+                       {/*<Route path={"/"} component={MyCardBag}></Route>*/}
                        <Route path={"/login"} component={Login}></Route>
                        <Route path={"/"} component={TarBar}></Route>
-                       {/*<Route path={"/"} component={MyCardBag}></Route>*/}
-                       {/*<Route path={"/login"} component={Login}></Route>*/}
-                       {/*<Route path={"/"} component={TarBar}></Route>*/}
                    </Switch>
                </Router>
            </div>

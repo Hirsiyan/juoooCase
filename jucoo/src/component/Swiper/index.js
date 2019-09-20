@@ -1,7 +1,6 @@
 import React from "react"
 import "../../assets/css/Swiper.css"
 import Swiper from "swiper/dist/js/swiper.js";
-import "swiper/dist/css/swiper.min.css";
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import swiperListActions from "../../store/actionCreators/swiper"
@@ -23,18 +22,18 @@ class SwpCom extends React.Component{
                             <div className={"swiper-list-postion-son-a"}>
                                 <Link to={"/SelectCity"}>
                                     全国
-                                    {/*{this.props.location.query.name}*/}
                                 </Link>
+                                <span className={"iconfont icon-location"}></span>
                             </div>
                             <div className={"swiper-list-postion-son-b"}>
-                                搜索热门演出
+                                <span className={"iconfont icon-xingtaiduICON_sousuo--"}></span>搜索热门演出
                             </div>
                             <div className={"swiper-list-postion-son-c"}>
                                 <img src="https://image.juooo.com/group1/M00/02/65/rAoKmVyvD7iAHJX4AAADmpmoUeI150.png" alt=""/>
                             </div>
                         </div>
                     </div>
-                    <div className="swiper-container">
+                    <div className="swiper-container" id={"swiper1"}>
                         <div className="swiper-wrapper">
                             {
                                 swiperList.map((v,i)=>(
@@ -51,7 +50,7 @@ class SwpCom extends React.Component{
         )
     }
     componentDidMount(){
-        const mySwiper = new Swiper('.swiper-container',{
+        const mySwiper1 = new Swiper('#swiper1',{
             observer: true,
             pagination: {
                 el: '.swiper-pagination',
