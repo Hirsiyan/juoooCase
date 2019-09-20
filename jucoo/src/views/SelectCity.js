@@ -97,14 +97,21 @@ class SelectCity extends React.Component {
                         <span className={"city-nav__lab"}>当前</span>
                         <span className={"city-nav__lab"}>定位</span>
                         <span className={"city-nav__lab"}>热门</span>
-                        <span className={"city-nav__lab"}>A</span>
+                        {
+                            arr.map((v,i)=>(
+                                <span className={"city-nav__lab"} key={{i}}>{v.id}</span>
+                            ))
+                        }
+
                     </section>
                 </div>
 
             </>
         )
     }
-    function
+    loction(){
+
+    }
     componentDidMount() {
         this.props.getCityList();
         this.props.getSortedList();
