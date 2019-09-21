@@ -18,17 +18,6 @@ class SwpCom extends React.Component{
                 <div className={"swiper-list"}>
                     <div className={"swiper-list-postion"} id={"swiper-list-postion"}>
                         <div className={"swiper-list-postion-son"}>
-<<<<<<< HEAD
-                            <div className={"swiper-list-postion-son-a"} onClick={()=>{
-                                this.props.history.push("/SelectCity")
-                            }}>
-                                <span className={"iconfont icon-location"}></span>
-                                {localStorage.name?JSON.parse(localStorage.name).name:JSON.parse(localStorage.China)}
-                            </div>
-                            <div className={"swiper-list-postion-son-b"} onClick={()=>{
-                                this.props.history.push("/Search")
-                            }}>
-=======
 
                             <div className={"swiper-list-postion-son-a"} id={"font-col"} onClick={()=>{
                                 this.props.history.push("/SelectCity")
@@ -36,8 +25,9 @@ class SwpCom extends React.Component{
                                 <span className={"iconfont icon-location"} id={"iconfont"}></span>
                                 <span >{localStorage.name?JSON.parse(localStorage.name).name:localStorage.China}</span>
                             </div>
-                            <div className={"swiper-list-postion-son-b"} id={"search"}>
->>>>>>> f330c1ec5a46be4a729e453e69ca292aec1a18f9
+                            <div className={"swiper-list-postion-son-b"} id={"search"} onClick={()=>{
+                                this.props.history.push("/Search")
+                            }}>
                                 <span className={"iconfont icon-xingtaiduICON_sousuo--"}></span>搜索热门演出
                             </div>
                             <div className={"swiper-list-postion-son-c"}>

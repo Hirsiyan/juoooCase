@@ -99,7 +99,7 @@ class SelectCity extends React.Component {
                         <span className={"city-nav__lab"}>热门</span>
                         {
                             arr.map((v,i)=>(
-                                <span className={"city-nav__lab"} key={{i}}>{v.id}</span>
+                                <span className={"city-nav__lab"} key={i}>{v.id}</span>
                             ))
                         }
 
