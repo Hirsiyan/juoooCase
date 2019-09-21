@@ -2,7 +2,6 @@ import React from "react"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import typeList from "../../store/actionCreators/typeList"
-import Swiper from "swiper/dist/js/swiper.js";
 class TypeList extends React.Component{
     render(){
         const typeList = this.props.typeList;
@@ -49,14 +48,6 @@ class TypeList extends React.Component{
         )
     }
     componentDidMount(){
-        if(this.props.typeList.length>0){
-            const mySwiper = new Swiper('swiper-container',{
-                observer: true,
-                observeParents: true,
-                paginationClickable: true,
-                slidesPerView : 'auto',
-            });
-        }
         this.props.getTypeList();
     }
 }

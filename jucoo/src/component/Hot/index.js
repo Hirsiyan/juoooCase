@@ -1,6 +1,5 @@
 import React from "react"
 import {connect} from "react-redux"
-import Swiper from "swiper/dist/js/swiper.js";
 import {bindActionCreators} from "redux"
 import swiperActions from "../../store/actionCreators/swiper"
 class Hot extends React.Component{
@@ -34,13 +33,6 @@ class Hot extends React.Component{
         )
     }
     componentDidMount(){
-        if(this.props.hotList.length>0){
-            const mySwiper3 = new Swiper('#swiper3',{
-                observer:true,
-                paginationClickable: true,
-                slidesPerView : 'auto',
-            });
-        }
         this.props.getHotList();
     }
 }

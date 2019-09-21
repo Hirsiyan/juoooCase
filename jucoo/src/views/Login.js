@@ -21,9 +21,13 @@ class Login extends React.Component{
                     <div className={"father-div2"}>
                         <div className={"login-list"}>
                             <form>
-                                <ul>
+                                <ul style={{display:"block"}} id={"passLogin"}>
                                     <li><input id={"phone"} className={"login-list-li1"} type="text" placeholder={"请输入手机号/邮箱"}/></li>
                                     <li><input id={"password"} className={"login-list-li1"} type="password" placeholder={"请输入密码"}/></li>
+                                </ul>
+                                <ul style={{display:"none"}} id={"codeLogin"}>
+                                    <li><input id={"phone2"} className={"login-list-li1"} type="text" placeholder={"请输入手机号/邮箱"}/></li>
+                                    <li><input id={"code"} className={"login-list-li1"} type="password" placeholder={"请输入验证码"}/></li>
                                 </ul>
                             </form>
                         </div>
@@ -32,7 +36,7 @@ class Login extends React.Component{
                         </div>
                         <div className={"login-foot"}>
                             <span>忘记密码</span>
-                            <span>验证码登录/注册</span>
+                            <span ref={"loginChoice"} id={"loginChoice"}>验证码登录/注册</span>
                         </div>
                     </div>
                 </div>
@@ -50,24 +54,35 @@ class Login extends React.Component{
     }
     componentDidMount(){
         const _this = this;
-        // console.log(this.props.history.location.state.goUrl)
         const phone = document.getElementById("phone");
+        const passLogin = document.getElementById("passLogin");
+        const codeLogin = document.getElementById("codeLogin");
         const password = document.getElementById("password");
         const btn = document.getElementById("btn");
+        const code = document.getElementById("code");
+        const loginChoice = document.getElementById("loginChoice");
+        loginChoice.onclick = function(){
+            if(loginChoice.innerHTML === "验证码登录/注册"){
+                passLogin.style.display = "none";
+                codeLogin.style.display = "block";
+                loginChoice.innerHTML = "密码登陆";
+                btn.value = "获取验证码";
+            }
+        };
         phone.oninput = function(){
             btn.style.background = "#ff4500";
         };
-        btn.onclick = function(){
-            if(phone.value.length<=0){
-                alert("请输入手机号")
-            }else if(password.value.length<=0){
-                alert("请输入密码")
-            }else{
-                alert("登陆成功");
-                localStorage.phone = phone.value;
-                _this.props.history.push({
-                    pathname:_this.props.history.location.state.goUrl
+        btn.onclick = async function(){
+            if(phone.value.length>0 && password.value.length>0){
+                const {data} = await axios.post("/m/login",{
+                    phoneId:phone.value,
+                    code:password.value
                 });
+                console.log(data);
+                localStorage.token = data.token;
+                _this.props.history.push("/Eticket");
+            }else{
+                alert("请输入用户名或者密码")
             }
         }
     }

@@ -25,7 +25,7 @@ class Eticket extends React.Component{
     componentWillMount(){
         console.log(this.props);
         // 如果不存在token，跳转到login页面
-        if(!localStorage.phone){
+        if(!localStorage.token){
             this.props.history.push({
                 pathname:"/login",
                 state:{

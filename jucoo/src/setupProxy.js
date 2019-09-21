@@ -8,7 +8,7 @@ module.exports = function(app){
         }
     }));
     app.use("/m",proxy({
-        target:"https://m.juooo.com",
+        target:"http://127.0.0.1",
         changeOrigin:true,
         pathRewrite:{
             "^/m":""
