@@ -7,6 +7,7 @@ import MyCardBag from "./views/MyCardBag/MyCardBag"
 import MyMoney from "./views/MyMoney";
 import Myintegral from "./views/Myintegral";
 import Plus from "./views/Plus";
+import Search from "./views/Search";
 import CouponExchange from "./views/CouponExchange"
 import {
     BrowserRouter as Router,
@@ -21,6 +22,7 @@ class App extends React.Component{
                <Router>
                    <ComRouter></ComRouter>
                    <Switch>
+                       <Route path={"/Search"} component={Search}></Route>
                        <Route path={"/SelectCity"} component={SelectCity}></Route>
                        <Route path={"/plus"} component={Plus}></Route>
                        <Route path={"/couponExchange"} component={CouponExchange}></Route>
