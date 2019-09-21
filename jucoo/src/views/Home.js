@@ -105,8 +105,12 @@ class Home extends React.Component{
                 </div>
                 <TypeList></TypeList>
                 <Recommend></Recommend>
+                <div style={{width:"100px",height:"100px"}}></div>
             </div>
         )
+    }
+    componentDidMount() {
+        console.log(this.props)
     }
 }
 

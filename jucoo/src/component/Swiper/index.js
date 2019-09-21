@@ -5,13 +5,20 @@ import {bindActionCreators} from "redux"
 import swiperListActions from "../../store/actionCreators/swiper"
 import {Link,withRouter} from "react-router-dom"
 class SwpCom extends React.Component{
+    constructor(props) {
+        super(props);
+
+    }
+
     render(){
+        console.log(this.props);
         const swiperList = this.props.swiperList;
         return(
             <div>
                 <div className={"swiper-list"}>
                     <div className={"swiper-list-postion"} id={"swiper-list-postion"}>
                         <div className={"swiper-list-postion-son"}>
+
                             <div className={"swiper-list-postion-son-a"} id={"font-col"} onClick={()=>{
                                 this.props.history.push("/SelectCity")
                             }}>
