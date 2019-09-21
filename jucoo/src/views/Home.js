@@ -105,7 +105,6 @@ class Home extends React.Component{
                 </div>
                 <TypeList></TypeList>
                 <Recommend></Recommend>
-                <div style={{width:"100%",height:"100px"}}></div>
             </div>
         )
     }
