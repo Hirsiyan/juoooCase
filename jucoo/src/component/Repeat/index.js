@@ -1,5 +1,4 @@
 import React from "react"
-import Swiper from "swiper/dist/js/swiper.js";
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import swiperActions from "../../store/actionCreators/swiper"
@@ -36,13 +35,6 @@ class Repeat extends React.Component{
         )
     }
     componentDidMount(){
-        if(this.props.repeatList.length>0){
-            const mySwiper4 = new Swiper('#swiper4',{
-                observer:true,
-                paginationClickable: true,
-                slidesPerView : 'auto',
-            });
-        }
         this.props.getRepeatList();
     }
 }

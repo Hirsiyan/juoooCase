@@ -1,5 +1,6 @@
 import swiperAction from "../../actionType/swiper"
 import axios from "axios"
+import Swiper from "swiper/dist/js/swiper.js";
 export function changeSwiperList(payload){
     return{
         type:swiperAction.CHANGE_SWIPER_LIST,
@@ -35,7 +36,7 @@ export default {
     getSuperList(){
         return async (dispatch)=>{
             const data = await axios.get("/juooo/vip/index/getVipHomeSchedular?version=6.0.5&referer=2");
-            // console.log(data.data.data.priorList)
+            console.log(data.data.data.priorList);
             dispatch(changeSuperList(data.data.data.priorList))
         }
     },
@@ -44,13 +45,23 @@ export default {
             const data = await axios.get("/juooo/home/index/getHotsRecommendList?city_id=0&version=6.0.5&referer=2");
             // console.log(data.data.data.hots_show_list.slice(0,10))
             dispatch(changeHotList(data.data.data.hots_show_list.slice(0,10)))
+            const mySwiper3 = new Swiper('#swiper3',{
+                observer:true,
+                paginationClickable: true,
+                slidesPerView : 'auto',
+            });
         }
     },
     getRepeatList(){
         return async (dispatch)=>{
             const data = await axios.get("/juooo/home/index/getTourRecommendList?city_id=0&version=6.0.5&referer=2");
             // console.log(data.data.data.tour_show_list)
-            dispatch(changeRepeatList(data.data.data.tour_show_list.slice(0,6)))
+            dispatch(changeRepeatList(data.data.data.tour_show_list.slice(0,6)));
+                const mySwiper4 = new Swiper('#swiper4',{
+                    observer:true,
+                    paginationClickable: true,
+                    slidesPerView : 'auto',
+                });
         }
     }
 }

@@ -33,7 +33,7 @@ class Vip extends React.Component{
                             </p>
                         </div>
                         <div className={"vip-server-son-2a"}>
-                            <p className={"vip-server-son-1a-1-p"}>日历</p>
+                            <p className={"vip-server-son-1a-1-p"} id={"vip-server-son-1a-1-p"}>日历</p>
                             <p>演出信息，<span style={{color:"#ff6743"}}>一目了然</span></p>
                             <p style={{display:"flex",justifyContent:"center"}}>
                                 <img style={{width:"40px",height:"30px"}} src="https://image.juooo.com/group1/M00/02/63/rAoKmVyul4KAN4xIAAAGqNi5vq4366.png" alt=""/>

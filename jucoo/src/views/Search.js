@@ -6,12 +6,14 @@ class Search extends React.Component {
     constructor() {
         super();
         this.state = {
-            ShowList: []
+            ShowList: [],
+            keyword:""
         }
     }
     render() {
         console.log(this.props);
         const ShowList = this.state.ShowList;
+        const keyword = this.state.keyword;
         return (
             <div className={"y-search"}>
                 <div className={"y-head"}>
@@ -39,7 +41,7 @@ class Search extends React.Component {
                         {/*        <li>李荣浩</li>*/}
                         {/*    </ul>*/}
                         {/*</section>*/}
-                        <div className={"default-wrap"} style={{display: "none"}}>
+                        <div className={"default-wrap"} style={{display:keyword.length===0?"block":"none"}}>
                             <section className={"default hot-search"}>
                                 <h3 className={"title y-clearfix"}>
                                                         <span className={"y-tilte"}>
@@ -55,7 +57,7 @@ class Search extends React.Component {
                         {
 
                             ShowList.map((v, i) => (
-                                    <div id={"itemList"} className={"item-list"} key={i} style={{display:1===1?"none":"block"}}>
+                                    <div id={"itemList"} className={"item-list"} key={i} style={{display:keyword.length===0?"none":"block"}}>
                                         <section className={"recommend-wrap"}>
                                             <div className={"recommend-list"}>
                                                 <ul>
@@ -110,7 +112,8 @@ class Search extends React.Component {
         console.log(search);
         const {data} = await axios.get("/juooo/Show/Search/getShowList?keywords=" + search + '&page=1&sort_type=1&version=6.0.5&referer=2');
         this.setState({
-            ShowList: data.data.list
+            ShowList: data.data.list,
+            keyword:search
         })
         const ShowList = this.state.ShowList;
         console.log(ShowList);
@@ -118,15 +121,6 @@ class Search extends React.Component {
     }
 
     componentDidMount() {
-        const hotSearch = document.querySelector(".default-wrap");
-        console.log(hotSearch);
-        const itemList = document.querySelector("#itemList");
-        console.log(itemList);
-        if (this.state.ShowList.length===0) {
-            hotSearch.style.display="block"
-        }else{
-            itemList.style.display="block"
-        }
         this.getSearChange();
     }
 }

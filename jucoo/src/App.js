@@ -28,7 +28,6 @@ class App extends React.Component{
                        <Route path={"/couponExchange"} component={CouponExchange}></Route>
                        <Route path={"/myintegral"} component={Myintegral}></Route>
                        <Route path={"/myMoney"} component={MyMoney}></Route>
-                       {/*<Route path={"/"} component={MyCardBag}></Route>*/}
                        <Route path={"/login"} component={Login}></Route>
                        <Route path={"/"} component={TarBar}></Route>
                    </Switch>

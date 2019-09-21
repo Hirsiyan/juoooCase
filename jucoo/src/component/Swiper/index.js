@@ -1,5 +1,4 @@
 import React from "react"
-import "../../assets/css/Swiper.css"
 import Swiper from "swiper/dist/js/swiper.js";
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
@@ -17,8 +16,9 @@ class SwpCom extends React.Component{
         return(
             <div>
                 <div className={"swiper-list"}>
-                    <div className={"swiper-list-postion"}>
+                    <div className={"swiper-list-postion"} id={"swiper-list-postion"}>
                         <div className={"swiper-list-postion-son"}>
+<<<<<<< HEAD
                             <div className={"swiper-list-postion-son-a"} onClick={()=>{
                                 this.props.history.push("/SelectCity")
                             }}>
@@ -28,6 +28,16 @@ class SwpCom extends React.Component{
                             <div className={"swiper-list-postion-son-b"} onClick={()=>{
                                 this.props.history.push("/Search")
                             }}>
+=======
+
+                            <div className={"swiper-list-postion-son-a"} id={"font-col"} onClick={()=>{
+                                this.props.history.push("/SelectCity")
+                            }}>
+                                <span className={"iconfont icon-location"} id={"iconfont"}></span>
+                                <span >{localStorage.name?JSON.parse(localStorage.name).name:localStorage.China}</span>
+                            </div>
+                            <div className={"swiper-list-postion-son-b"} id={"search"}>
+>>>>>>> f330c1ec5a46be4a729e453e69ca292aec1a18f9
                                 <span className={"iconfont icon-xingtaiduICON_sousuo--"}></span>搜索热门演出
                             </div>
                             <div className={"swiper-list-postion-son-c"}>
@@ -62,10 +72,36 @@ class SwpCom extends React.Component{
             },
         });
         this.props.getSwiperList();
+        window.onload=function () {
+            let iconfont  = document.getElementById("iconfont"),
+                search = document.getElementById("search"),
+                fontCol = document.getElementById("font-col"),
+                big_nav = document.getElementById("swiper-list-postion"),//获取到导航栏id
+                H = 0,
+                Y = big_nav;
+            while (Y) {
+                H += Y.offsetTop;
+                Y = Y.offsetParent;
+            }
+
+            window.onscroll = function () {
+                let topScroll = document.body.scrollTop || document.documentElement.scrollTop;//滚动的距离,距离顶部的距离
+                if (topScroll > H) {  //当滚动距离大于H时执行下面的东西
+                    iconfont.style.color = "orange";
+                    fontCol.style.cssText = "color:black;background:white";
+                    search.style.cssText = "background:#D3D3D3;color:gray";
+                    big_nav.style.cssText = "position:fixed;top:0;z-index:9999;background-color:white";
+                } else {//当滚动距离小于H的时候执行下面的内容，也就是让导航栏恢复原状
+                    big_nav.style = '';
+                    iconfont.style = "";
+                    fontCol.style = "";
+                    search.style = "";
+                }
+            }
+        }
     }
 }
 function mapStateToProps(state){
-    // console.log(state);
     return{
         swiperList:state.swiperList.swiperList
     }
