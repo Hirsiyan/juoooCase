@@ -7,6 +7,7 @@ import MyCardBag from "./views/MyCardBag/MyCardBag"
 import MyMoney from "./views/MyMoney";
 import Myintegral from "./views/Myintegral";
 import Plus from "./views/Plus";
+import Search from "./views/Search";
 import CouponExchange from "./views/CouponExchange"
 
 import {
@@ -22,14 +23,12 @@ class App extends React.Component{
                <Router>
                    <ComRouter></ComRouter>
                    <Switch>
-                       {/*<Route path={"/SelectCity"} component={SelectCity}></Route>*/}
-                       {/*<Route path={"/plus"} component={Plus}></Route>*/}
-                       {/*<Route path={"/couponExchange"} component={CouponExchange}></Route>*/}
-                       {/*<Route path={"/myintegral"} component={Myintegral}></Route>*/}
-                       {/*<Route path={"/myMoney"} component={MyMoney}></Route>*/}
-                       {/*<Route path={"/login"} component={Login}></Route>*/}
-                       {/*<Route path={"/"} component={TarBar}></Route>*/}
-                       {/*<Route path={"/"} component={MyCardBag}></Route>*/}
+                       <Route path={"/Search"} component={Search}></Route>
+                       <Route path={"/SelectCity"} component={SelectCity}></Route>
+                       <Route path={"/plus"} component={Plus}></Route>
+                       <Route path={"/couponExchange"} component={CouponExchange}></Route>
+                       <Route path={"/myintegral"} component={Myintegral}></Route>
+                       <Route path={"/myMoney"} component={MyMoney}></Route>
                        <Route path={"/login"} component={Login}></Route>
                        <Route path={"/"} component={TarBar}></Route>
                    </Switch>

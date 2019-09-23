@@ -1,11 +1,11 @@
 import React from "react";
-import "../assets/css/Home.css";
 import SwpCom from "../component/Swiper"
 import Super from "../component/Super"
 import Vip from "../component/Vip"
 import Hot from "../component/Hot"
 import Repeat from "../component/Repeat"
 import TypeList from "../component/TypeList"
+import Recommend from "../component/Recommend"
 import "swiper/dist/css/swiper.min.css";
 class Home extends React.Component{
     render(){
@@ -104,11 +104,13 @@ class Home extends React.Component{
                     </div>
                 </div>
                 <TypeList></TypeList>
-                <div style={{width:'100px',height:"200px",background:"yellow",marginTop:"20px"}}>
-
-                </div>
+                <Recommend></Recommend>
+                <div style={{width:"100px",height:"100px"}}></div>
             </div>
         )
+    }
+    componentDidMount() {
+        console.log(this.props)
     }
 }
 

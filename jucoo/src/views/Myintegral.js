@@ -2,6 +2,7 @@ import React from 'react'
 import "../assets/css/Myintegral.css"
 class Myintegral extends React.Component{
     render() {
+        console.log(this.props)
         return(
             <div className="views">
                 <div className="view">
@@ -9,7 +10,7 @@ class Myintegral extends React.Component{
                         <div className="navTop-inner">
                             <div className="left">
                                 <a href="javascript:;">
-                                     <span className="icon iconfont">
+                                     <span className="icon iconfont" onClick={()=>{this.props.history.go(-1)}}>
                                           &#xe603;
                                      </span>
                                 </a>
@@ -45,7 +46,7 @@ class Myintegral extends React.Component{
                                     <div className="item integral">
                                         <p className="name">每日登录</p>
                                         <p className="time">2019.9.15 18.22.33</p>
-                                        <span className="add num">+2</span>
+                                        <span className="add">+2</span>
                                     </div>
                             </div>
                         </div>
