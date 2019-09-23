@@ -8,6 +8,7 @@ import MyMoney from "./views/MyMoney";
 import Myintegral from "./views/Myintegral";
 import Plus from "./views/Plus";
 import CouponExchange from "./views/CouponExchange"
+
 import {
     BrowserRouter as Router,
     Switch,
