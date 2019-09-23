@@ -1,0 +1,53 @@
+.leaving-message{
+    width:100%;
+    height:120px;
+    background: rgb(255, 155, 84);
+    color:#fff;
+    line-height:120px;
+    padding:0 20px;
+}
+.leaving-message span{
+    margin-left:75%;
+}
+.message-main{
+    height:1210px;
+    background:#eee;
+}
+.message-main p{
+    padding:15px 0 5px 15px;
+    margin-bottom:0;
+}
+.message-main p span{
+    color:red;
+}
+.message-main input{
+    border:none;
+    background:#fff;
+    padding:25px;
+    width:100%;
+}
+.message{
+    background:#fff;
+    height:200px;
+    padding:25px;
+    margin-bottom:35px;
+}
+.message-main  .message-main-btn{
+    padding:0;
+    width: 80%;
+    height: 80px;
+    line-height: 80px;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    border-width: 0px;
+    border-style: initial;
+    border-color: initial;
+    border-image: initial;
+    outline: none;
+    border-radius: 3px;
+    text-decoration: none;
+    background: rgb(255, 155, 84);
+    margin-left:10%;
+}

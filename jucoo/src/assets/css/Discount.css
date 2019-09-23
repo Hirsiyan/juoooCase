@@ -1,0 +1,146 @@
+*{
+    list-style:none;
+}
+body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#app{
+    width:100%;
+    height:100%
+}
+.discount{
+    height:100%;
+}
+.discount_head{
+    z-index: 101;
+    left: 0;
+    right: 0;
+    height: 1.17333rem;
+}
+.title{
+    height: 1.17333rem;
+    width: 100%;
+    background-color: #fff;
+    font-size: .48rem;
+    color: #232323;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #ebebeb;
+    box-sizing: border-box;
+}
+.tab-box{
+    position: relative;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    /*top: 1.17333rem;*/
+    height: 1.33333rem;
+    padding-left: .4rem;
+    padding-right: 2.18667rem;
+    background-color: #fefefe;
+
+}
+.swiper-container{
+    position: relative;
+}
+.swiper-slide{
+    width:2.33333rem;
+    height: 1.33333rem;
+    /*float: left;*/
+    /*padding: .13333rem;*/
+    font-size: .4rem;
+    margin-right: 2px;
+    padding-top: 25px;
+}
+.whole{
+    width:6.53333rem;
+    height: 1.33333rem;
+    padding: .13333rem;
+    font-size: .4rem;
+    margin-right: .54667rem;
+    border-bottom: .04rem solid #ff6743;
+    color: #ff6743;
+}
+.slide-tab-right{
+    width:1.33333rem;
+    height: 1.33333rem;
+    position: absolute;
+    top: .3rem;
+    color:#7e8c8d;
+    margin-left: 620px;
+    font-size: .4rem;
+}
+
+.swiper-wrapper{
+    height:1.3rem;
+}
+.discount__item{
+    padding-left: .4rem;
+    padding-right: .4rem;
+    background-color: #fefefe;
+    margin-bottom: .32rem;
+}
+.exclusive-card{
+    position: relative;
+    padding: .53333rem 0;
+}
+.item_exclusive-card__base{
+    width:9.2rem;
+    margin-top: 25px;
+}
+.pic{
+    background: #55a532;
+    width:3rem;
+    height: 4rem;
+}
+.item__info{
+    float: right;
+    width:5rem;
+    height: 4rem;
+    margin-right: 50px;
+    padding-top: 15px;
+}
+.item__info__date-week{
+    width:5rem;
+    height: .7rem;
+    display: inline-block;
+    font-weight: 700;
+    line-height: .42667rem;
+    font-size: .42667rem;
+}
+.item_info_name{
+    width:5rem;
+    height:1.7rem;
+    font-size: .45333rem;
+    font-weight: 700;
+    color: #232323;
+    line-height: .61333rem;
+    overflow: hidden;
+}
+.item_info_place{
+    width:5rem;
+    height:.5rem;
+    color: #666;
+    line-height: .5rem;
+
+}
+.exclusive-card__extra-wrapper{
+    width:5rem;
+    height:.9rem;
+    color: #ff6743;
+    font-size: .42667rem;
+    padding-top: 10px;
+}
+.discount__item__bottom{
+    width:9rem;
+    height:.9rem;
+    color: #ff6743;
+    padding-left: 7rem;
+
+}
+
+

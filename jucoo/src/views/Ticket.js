@@ -2,6 +2,9 @@ import React from "react"
 import '../assets/css/Ticket.css'
 import axios from 'axios';
 import Tools from '../common/Tools'
+import Reminder from "./Reminder";
+import '../assets/fonts/iconfont.css'
+import CustomerService from "./CustomerService";
 class Ticket extends React.Component{
     constructor(){
         super();
@@ -21,11 +24,11 @@ class Ticket extends React.Component{
 
                         <div className="head" style={{backgroundImage:"url("+v.share_pic+")",backgroundSize:'cover',opacity: '0.5'}}>
                             <div className="header-top">
-                                <i className="iconfont icon-htmal5icon37"></i>
+                                <i className="iconfont icon-fanhui1-copy"></i>
                                 <span>演出详情</span>
                                 <span>
                                   <i className="iconfont icon-fenxiang"></i>
-                                  <i className="iconfont icon-home"></i>
+                                  <i className="iconfont icon-shouye"></i>
                                 </span>
                             </div>
 
@@ -66,7 +69,7 @@ class Ticket extends React.Component{
                                 领券：
                                 <span>满11减10</span>
                                 <span>满400减30</span>
-                                <i className="iconfont icon-gengduo"></i>
+                                <i className="iconfont icon-sandian"></i>
                             </div>
                             <hr/>
                             <div className="detail-schedule-vip">
@@ -111,7 +114,7 @@ class Ticket extends React.Component{
                         <div className="reminder">
                             <div className="reminder-title">
                                 <h2>温馨提示</h2>
-                                <span> > </span>
+                                <span><Reminder></Reminder>  </span>
                             </div>
 
                             {
@@ -123,14 +126,15 @@ class Ticket extends React.Component{
                             ))
                             }
                         </div>
+
                     </div>
                 ))
                 }
                 <div className="related-recommendations">
                     <h2>相关推荐</h2>
                     {
-                        this.state.recommend.map(v=>(
-                                    <div className="related-recommendations-main" key={v.id}>
+                        this.state.recommend.map((v,i)=>(
+                                    <div className="related-recommendations-main" key={i}>
                                         <div className="related-recommendations-main-img">
                                             <img src={v.pic} alt=""/>
                                         </div>
@@ -147,7 +151,7 @@ class Ticket extends React.Component{
                 </div>
                 <div className="footer">
                     <div className="footer-main">
-                        <span className="iconfont icon-kefu"></span>
+                        <span className="iconfont icon-kefubangzhu"></span>
                         <p>客服</p>
                     </div>
                     <div className="footer-btn">选座购买</div>

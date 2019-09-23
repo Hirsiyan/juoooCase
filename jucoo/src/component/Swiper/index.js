@@ -20,7 +20,7 @@ class SwpCom extends React.Component{
                                 {localStorage.name?JSON.parse(localStorage.name).name:JSON.parse(localStorage.China)}
                             </div>
                             <div className={"swiper-list-postion-son-b"} id={"search"} onClick={()=>{
-                                this.props.history.push("/Search/0")
+                                this.props.history.push("/Search")
                             }}>
                                 <span className={"iconfont icon-xingtaiduICON_sousuo--"}></span>搜索热门演出
                             </div>
