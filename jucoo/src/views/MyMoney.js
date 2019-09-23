@@ -1,6 +1,5 @@
 import React from "react"
 import "../assets/css/MyMoney.css"
-import "../assets/fonts/iconfont.css"
 class MyMoney extends React.Component{
     render() {
         return(
@@ -11,7 +10,7 @@ class MyMoney extends React.Component{
                             <div className="navTop-inner">
                                 <div className="left">
                                     <a href="javascript:;">
-                                     <span className="icon iconfont">
+                                     <span className="icon iconfont"onClick={()=>{this.props.history.go(-1)}}>
                                           &#xe603;
                                      </span>
                                     </a>

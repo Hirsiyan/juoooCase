@@ -86,3 +86,56 @@
 .city .city-block__con__wrap .hots--item {
     margin-bottom: .2rem;
 }
+.city .city-block__row__con__letter{
+    height: .77333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: .4rem;
+    font-size: .34667rem;
+    color: #999;
+}
+.city .city-block__row__con__wrap{
+    padding: 0 1.13333rem 0 .4rem;
+    background-color: #fefefe;
+}
+.city .city-block__row__con__column{
+    height: 1.33333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: .34667rem;
+    color: #232323;
+    border-bottom: 1px solid #ebebeb;
+}
+.city .city-nav{
+    position: fixed;
+    right: .26667rem;
+    top: 3.17333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.city .city-nav__lab{
+    font-size: .26667rem;
+    color: #666;
+    margin-bottom: .08rem;
+    width: 100%;
+    text-align: center;
+}
+

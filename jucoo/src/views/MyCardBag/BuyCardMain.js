@@ -1,7 +1,4 @@
 import React from 'react'
-
-//import '../../assets/css/reset.css'
-
 import '../../assets/css/MyCardBag/BuyCardMain.css'
 import CardSwiper from "../../component/MyCardBag/CardSwiper";
 

@@ -1,8 +1,4 @@
 import React from "react"
-
-
-//import "../../assets/css/reset.css"
-
 import "../../assets/css/MyCardBag/CardSon.css"
 import MyCardMain from "./MyCardMain";
 import GetBack from "./getBack";
