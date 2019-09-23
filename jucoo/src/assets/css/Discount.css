@@ -51,7 +51,7 @@ body,html{
     width:2.33333rem;
     height: 1.33333rem;
     /*float: left;*/
-    padding: .13333rem;
+    /*padding: .13333rem;*/
     font-size: .4rem;
     margin-right: 2px;
     padding-top: 25px;
@@ -74,6 +74,7 @@ body,html{
     margin-left: 620px;
     font-size: .4rem;
 }
+
 .swiper-wrapper{
     height:1.3rem;
 }
@@ -89,7 +90,6 @@ body,html{
 }
 .item_exclusive-card__base{
     width:9.2rem;
-    /*background: #ee9900;*/
     margin-top: 25px;
 }
 .pic{
@@ -101,7 +101,6 @@ body,html{
     float: right;
     width:5rem;
     height: 4rem;
-    /*background: #DD4A68;*/
     margin-right: 50px;
     padding-top: 15px;
 }
@@ -116,7 +115,6 @@ body,html{
 .item_info_name{
     width:5rem;
     height:1.7rem;
-    /*background: aqua;*/
     font-size: .45333rem;
     font-weight: 700;
     color: #232323;
@@ -126,7 +124,6 @@ body,html{
 .item_info_place{
     width:5rem;
     height:.5rem;
-    /*background: pink;*/
     color: #666;
     line-height: .5rem;
 
@@ -134,7 +131,6 @@ body,html{
 .exclusive-card__extra-wrapper{
     width:5rem;
     height:.9rem;
-    /*background: yellow;*/
     color: #ff6743;
     font-size: .42667rem;
     padding-top: 10px;
@@ -142,9 +138,7 @@ body,html{
 .discount__item__bottom{
     width:9rem;
     height:.9rem;
-    /*background:#fefefe;*/
     color: #ff6743;
-    /*font-size: .42667rem;*/
     padding-left: 7rem;
 
 }

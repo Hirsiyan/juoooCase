@@ -2,6 +2,7 @@ import React from "react";
 import "../assets/css/Discount.css"
 import Swiper from 'swiper';
 import "../assets/fonts/iconfont.css"
+import Location from "../component/Location/index"
 import axios from "axios";
 
 class Discount extends React.Component{
@@ -32,7 +33,9 @@ class Discount extends React.Component{
                                     ))}
                                 </div>
                             </div>
-                            <div className={"slide-tab-right"}>筛选</div>
+                            <div className={"slide-tab-right"}>
+                                <Location></Location>
+                            </div>
                         </div>
                     <div className={"discount-scroll"}>
                         <div className={"discount__item"}>
@@ -41,26 +44,14 @@ class Discount extends React.Component{
                                     <div key={i} className={"item_exclusive-card__base"}>
                                         <img className={"pic"} src={v.pic}/>
                                         <div className={"item__info"}>
-                                            <div className={"item__info__date-week"}>
-                                                {v.date}
-                                            </div>
-                                            <div className={"item_info_name"}>
-                                                {v.schedular_name}
-                                            </div>
-                                            <div className={"item_info_place"}>
-                                                {v.city_name} | {v.venue_name}
-                                            </div>
-                                            <div className={"exclusive-card__extra-wrapper"}>
-                                                ￥ {v.min_price}
-                                            </div>
-
+                                            <div className={"item__info__date-week"}>{v.date}</div>
+                                            <div className={"item_info_name"}>{v.schedular_name}</div>
+                                            <div className={"item_info_place"}>{v.city_name} | {v.venue_name}</div>
+                                            <div className={"exclusive-card__extra-wrapper"}>￥ {v.min_price}</div>
                                         </div>
-                                        <div className={"discount__item__bottom"}>
-                                            {v.end_time} {v.min_discount}
-                                        </div>
+                                        <div className={"discount__item__bottom"}>{v.end_time} {v.min_discount}</div>
                                     </div>
                                 ))}
-
                             </div>
                         </div>
                     </div>
@@ -72,7 +63,6 @@ class Discount extends React.Component{
     async getData (){
         const info = await axios.get("/juooo/Show/Index/getShowCategoryList?version=6.0.5&referer=2");
         console.log(info.data.data);
-
         this.setState({
             CategoryList:info.data.data
         });
@@ -81,14 +71,11 @@ class Discount extends React.Component{
     async getDiscount(){
         const info = await axios.get("/juooo/vip/index/getDiscountList?page=1&city_id=0&cate_id=0&discount_id=0&version=6.0.5&referer=2");
         console.log(info.data.data);
-
         this.setState({
             DiscountList:info.data.data.list
         });
         console.log(this.state.DiscountList)
     }
-
-
 
     componentDidMount() {
         this.getData();
