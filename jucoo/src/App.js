@@ -9,6 +9,7 @@ import Myintegral from "./views/Myintegral";
 import Plus from "./views/Plus";
 import Search from "./views/Search";
 import CouponExchange from "./views/CouponExchange"
+import Ticket from "./views/Ticket"
 import {
     BrowserRouter as Router,
     Switch,
@@ -22,6 +23,7 @@ class App extends React.Component{
                <Router>
                    <ComRouter></ComRouter>
                    <Switch>
+                       <Route path={"/ticket/:id"} component={Ticket}></Route>
                        <Route path={"/Search"} component={Search}></Route>
                        <Route path={"/SelectCity"} component={SelectCity}></Route>
                        <Route path={"/plus"} component={Plus}></Route>

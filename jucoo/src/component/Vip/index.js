@@ -1,11 +1,14 @@
 import React from "react"
+import {withRouter} from "react-router-dom"
 class Vip extends React.Component{
     render(){
         return(
             <div className={"vip-server"}>
                 <div className={"vip-server-son"}>
                     <div className={"vip-server-son-1"}>
-                        <div className={"vip-server-son-1a"}>
+                        <div className={"vip-server-son-1a"} onClick={()=>{
+                            this.props.history.push("/plus")
+                        }}>
                             <div className={"vip-server-son-1a-1"}>
                                 <p className={"vip-server-son-1a-1-p"}>橙PLUS卡</p>
                                 <p>送<span style={{color:"#ff6743"}}>100元</span>,享V+权益</p>
@@ -52,4 +55,4 @@ class Vip extends React.Component{
         )
     }
 }
-export default Vip;
+export default withRouter(Vip);

@@ -1,6 +1,5 @@
 import React from "react"
 import "../assets/css/selectCity.css"
-import axios from 'axios'
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import changeSelec from "../store/actionCreators/selectCity"
@@ -99,7 +98,7 @@ class SelectCity extends React.Component {
                         <span className={"city-nav__lab"}>热门</span>
                         {
                             arr.map((v,i)=>(
-                                <span className={"city-nav__lab"} key={{i}}>{v.id}</span>
+                                <span className={"city-nav__lab"} key={i}>{v.id}</span>
                             ))
                         }
 

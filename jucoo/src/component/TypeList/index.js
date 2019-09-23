@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import typeList from "../../store/actionCreators/typeList"
+import {withRouter} from "react-router-dom"
 class TypeList extends React.Component{
     render(){
         const typeList = this.props.typeList;
@@ -28,7 +29,9 @@ class TypeList extends React.Component{
                                     <div className="swiper-wrapper">
                                         {
                                             v.list.slice(1).map((v,i)=>(
-                                                <div className="swiper-slide swiper-slide-div1" key={i}>
+                                                <div className="swiper-slide swiper-slide-div1" key={i}  onClick={()=>{
+                                                    this.props.history.push("/ticket/"+v.url.slice(27))
+                                                }}>
                                                     <div className="swiper-slide-div1-div2">
                                                         <div className="swiper-slide-div1-div2a">
                                                             <img className="swiper-slide-div1-div2a-img" src={v.pic} alt=""/>
@@ -56,4 +59,4 @@ function mapStateToProps(state){
         typeList:state.typeList.typeList
     }
 }
-export default connect(mapStateToProps,dispatch=>bindActionCreators(typeList,dispatch))(TypeList)
+export default withRouter(connect(mapStateToProps,dispatch=>bindActionCreators(typeList,dispatch))(TypeList));

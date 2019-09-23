@@ -3,13 +3,8 @@ import Swiper from "swiper/dist/js/swiper.js";
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import swiperListActions from "../../store/actionCreators/swiper"
-import {Link,withRouter} from "react-router-dom"
+import {withRouter} from "react-router-dom"
 class SwpCom extends React.Component{
-    constructor(props) {
-        super(props);
-
-    }
-
     render(){
         console.log(this.props);
         const swiperList = this.props.swiperList;
@@ -18,26 +13,15 @@ class SwpCom extends React.Component{
                 <div className={"swiper-list"}>
                     <div className={"swiper-list-postion"} id={"swiper-list-postion"}>
                         <div className={"swiper-list-postion-son"}>
-<<<<<<< HEAD
-                            <div className={"swiper-list-postion-son-a"} onClick={()=>{
-                                this.props.history.push("/SelectCity")
-                            }}>
-                                <span className={"iconfont icon-location"}></span>
-                                {localStorage.name?JSON.parse(localStorage.name).name:JSON.parse(localStorage.China)}
-                            </div>
-                            <div className={"swiper-list-postion-son-b"} onClick={()=>{
-                                this.props.history.push("/Search")
-                            }}>
-=======
-
                             <div className={"swiper-list-postion-son-a"} id={"font-col"} onClick={()=>{
                                 this.props.history.push("/SelectCity")
                             }}>
                                 <span className={"iconfont icon-location"} id={"iconfont"}></span>
-                                <span >{localStorage.name?JSON.parse(localStorage.name).name:localStorage.China}</span>
+                                {localStorage.name?JSON.parse(localStorage.name).name:JSON.parse(localStorage.China)}
                             </div>
-                            <div className={"swiper-list-postion-son-b"} id={"search"}>
->>>>>>> f330c1ec5a46be4a729e453e69ca292aec1a18f9
+                            <div className={"swiper-list-postion-son-b"} id={"search"} onClick={()=>{
+                                this.props.history.push("/Search/0")
+                            }}>
                                 <span className={"iconfont icon-xingtaiduICON_sousuo--"}></span>搜索热门演出
                             </div>
                             <div className={"swiper-list-postion-son-c"}>
@@ -50,7 +34,7 @@ class SwpCom extends React.Component{
                             {
                                 swiperList.map((v,i)=>(
                                     <div key={i} className={"swiper-slide"}>
-                                        <Link to={"/login"}><img src={v.image_url} alt="" className={"swiper-container-img"}/></Link>
+                                        <a href={v.url}><img src={v.image_url} alt="" className={"swiper-container-img"}/></a>
                                     </div>
                                 ))
                             }
@@ -102,6 +86,7 @@ class SwpCom extends React.Component{
     }
 }
 function mapStateToProps(state){
+    console.log(state)
     return{
         swiperList:state.swiperList.swiperList
     }
