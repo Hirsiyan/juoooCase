@@ -1,0 +1,13 @@
+.address-btn{
+    width:100px;
+    height:50px;
+    font-size:30px;
+}
+.address-btn i{
+    font-size:30px;
+}
+.address-title h2{
+    font-size:30px;
+    font-weight:700;
+    color:#ccc;
+}

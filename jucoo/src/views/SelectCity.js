@@ -1,6 +1,5 @@
 import React from "react"
 import "../assets/css/selectCity.css"
-import axios from 'axios'
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import changeSelec from "../store/actionCreators/selectCity"

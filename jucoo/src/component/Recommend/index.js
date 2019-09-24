@@ -6,6 +6,7 @@ import Tools from "../../common/Tools"
 import { Spin } from 'antd';
 import 'antd/dist/antd.css';
 import InfiniteScroll from "react-infinite-scroll-component";
+import {Link} from "react-router-dom"
 class Recommend extends React.Component{
     render(){
         const recommendList = this.props.recommendList;
@@ -24,7 +25,7 @@ class Recommend extends React.Component{
                     {this.props.recommendList.map((v,i) => (
                         <div key={i} className={"recommend-div2"}>
                             <div className={"recommend-div2-1"}>
-                                <img className={"recommend-div2-1-img"} src={v.schePic} alt=""/>
+                                <Link to={"/ticket/"+v.sche_id}><img className={"recommend-div2-1-img"} src={v.schePic} alt=""/></Link>
                             </div>
                             <div className={"recommend-div2-2"}>
                                 <p className={"recommend-div2-2-p1"}><span style={{color:"black"}}>

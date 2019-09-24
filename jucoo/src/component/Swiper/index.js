@@ -3,27 +3,20 @@ import Swiper from "swiper/dist/js/swiper.js";
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import swiperListActions from "../../store/actionCreators/swiper"
-import {Link,withRouter} from "react-router-dom"
+import {withRouter} from "react-router-dom"
 class SwpCom extends React.Component{
-    constructor(props) {
-        super(props);
-
-    }
-
     render(){
-        console.log(this.props);
         const swiperList = this.props.swiperList;
         return(
             <div>
                 <div className={"swiper-list"}>
                     <div className={"swiper-list-postion"} id={"swiper-list-postion"}>
                         <div className={"swiper-list-postion-son"}>
-
                             <div className={"swiper-list-postion-son-a"} id={"font-col"} onClick={()=>{
                                 this.props.history.push("/SelectCity")
                             }}>
                                 <span className={"iconfont icon-location"} id={"iconfont"}></span>
-                                <span >{localStorage.name?JSON.parse(localStorage.name).name:localStorage.China}</span>
+                                {localStorage.name?JSON.parse(localStorage.name).name:JSON.parse(localStorage.China)}
                             </div>
                             <div className={"swiper-list-postion-son-b"} id={"search"} onClick={()=>{
                                 this.props.history.push("/Search")
@@ -40,7 +33,7 @@ class SwpCom extends React.Component{
                             {
                                 swiperList.map((v,i)=>(
                                     <div key={i} className={"swiper-slide"}>
-                                        <Link to={"/login"}><img src={v.image_url} alt="" className={"swiper-container-img"}/></Link>
+                                        <a href={v.url}><img src={v.image_url} alt="" className={"swiper-container-img"}/></a>
                                     </div>
                                 ))
                             }
@@ -52,15 +45,7 @@ class SwpCom extends React.Component{
         )
     }
     componentDidMount(){
-        const mySwiper1 = new Swiper('#swiper1',{
-            observer: true,
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            autoplay: {
-                disableOnInteraction: false,
-            },
-        });
+
         this.props.getSwiperList();
         window.onload=function () {
             let iconfont  = document.getElementById("iconfont"),

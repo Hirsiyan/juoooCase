@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import swiperActions from "../../store/actionCreators/swiper"
+import {Link} from "react-router-dom"
 class Hot extends React.Component{
     render(){
         const hotList = this.props.hotList;
@@ -18,10 +19,12 @@ class Hot extends React.Component{
                                 hotList.map((v,i)=>(
                                     <div className="swiper-slide swiper-slide-div1" key={i}>
                                         <div className="swiper-slide-div1-div2">
-                                            <div className="swiper-slide-div1-div2a">
-                                                <img className="swiper-slide-div1-div2a-img" src={v.pic} alt=""/>
-                                                <p className={"hot-son-2-p"}>{v.show_name}</p>
-                                            </div>
+                                            <Link to={"/ticket/"+v.schedular_url.slice(27)}>
+                                                <div className="swiper-slide-div1-div2a">
+                                                    <img className="swiper-slide-div1-div2a-img" src={v.pic} alt=""/>
+                                                    <p className={"hot-son-2-p"}>{v.show_name}</p>
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                 ))

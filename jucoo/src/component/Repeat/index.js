@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import swiperActions from "../../store/actionCreators/swiper"
+import {withRouter} from "react-router-dom"
 class Repeat extends React.Component{
     render(){
         const repeatList = this.props.repeatList;
@@ -17,14 +18,14 @@ class Repeat extends React.Component{
                             <div className="swiper-wrapper">
                                 {
                                    repeatList.map((v,i)=>(
-                                        <div className="swiper-slide swiper-slide-div1" key={i}>
-                                            <div className="swiper-slide-div1-div2">
-                                                <div className="swiper-slide-div1-div2a">
-                                                    <img className="swiper-slide-div1-div2a-img" src={v.pic} alt=""/>
-                                                    <p className={"hot-son-2-p"}>{v.show_name}</p>
-                                                </div>
-                                            </div>
-                                        </div>
+                                           <div className="swiper-slide swiper-slide-div1" key={i}>
+                                               <div className="swiper-slide-div1-div2">
+                                                   <div className="swiper-slide-div1-div2a">
+                                                       <img className="swiper-slide-div1-div2a-img" src={v.pic} alt=""/>
+                                                       <p className={"hot-son-2-p"}>{v.show_name}</p>
+                                                   </div>
+                                               </div>
+                                           </div>
                                     ))
                                 }
                             </div>
@@ -43,4 +44,4 @@ function mapStateToProps(state){
         repeatList:state.swiperList.repeatList
     }
 }
-export default connect(mapStateToProps,dispatch=>bindActionCreators(swiperActions,dispatch))(Repeat);
+export default withRouter(connect(mapStateToProps,dispatch=>bindActionCreators(swiperActions,dispatch))(Repeat))

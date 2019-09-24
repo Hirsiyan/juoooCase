@@ -59,7 +59,6 @@ class Login extends React.Component{
         const codeLogin = document.getElementById("codeLogin");
         const password = document.getElementById("password");
         const btn = document.getElementById("btn");
-        const code = document.getElementById("code");
         const loginChoice = document.getElementById("loginChoice");
         loginChoice.onclick = function(){
             if(loginChoice.innerHTML === "验证码登录/注册"){
