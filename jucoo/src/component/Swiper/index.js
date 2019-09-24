@@ -6,7 +6,6 @@ import swiperListActions from "../../store/actionCreators/swiper"
 import {withRouter} from "react-router-dom"
 class SwpCom extends React.Component{
     render(){
-        console.log(this.props);
         const swiperList = this.props.swiperList;
         return(
             <div>
@@ -86,7 +85,6 @@ class SwpCom extends React.Component{
     }
 }
 function mapStateToProps(state){
-    console.log(state)
     return{
         swiperList:state.swiperList.swiperList
     }

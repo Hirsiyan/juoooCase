@@ -15,7 +15,7 @@ class TypeList extends React.Component{
                                     <p className={"typeList1-div1-p1"}>{v.title}</p>
                                     <p className={"typeList1-div1-p2"}> > </p>
                                 </div>
-                                <div className={"typeList1-div2"}>
+                                <div className={"typeList1-div2"}  style={{background: 'rgb(163, 154, 113)'}}>
                                     <div className={"typeList1-div2-1"}>
                                         <img className={"typeList1-div2-1-img"} src={v.list[0].pic} alt=""/>
                                     </div>
@@ -26,7 +26,7 @@ class TypeList extends React.Component{
                                     </div>
                                 </div>
                                 <div className="swiper-container">
-                                    <div className="swiper-wrapper">
+                                    <div className="swiper-wrapper typeList1-div3">
                                         {
                                             v.list.slice(1).map((v,i)=>(
                                                 <div className="swiper-slide swiper-slide-div1" key={i}  onClick={()=>{
