@@ -30,12 +30,26 @@ export default {
         return async (dispatch)=>{
             const data = await axios.get("/juooo/home/index/getClassifyHome?city_id=0&abbreviation=&version=6.0.5&referer=2");
             dispatch(changeSwiperList(data.data.data.slide_list));
+            const mySwiper1 = new Swiper('#swiper1',{
+                observer: true,
+                observeParents:true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                slidesPerView :1
+            })
         }
     },
     getSuperList(){
         return async (dispatch)=>{
             const data = await axios.get("/juooo/vip/index/getVipHomeSchedular?version=6.0.5&referer=2");
-            dispatch(changeSuperList(data.data.data.priorList))
+            dispatch(changeSuperList(data.data.data.priorList));
+            const mySwiper2 = new Swiper('#swiper2',{
+                observer: true,
+                observeParents:true,
+                loop:true,
+                slidesPerView :1,
+            });
         }
     },
     getHotList(){
@@ -44,6 +58,7 @@ export default {
             dispatch(changeHotList(data.data.data.hots_show_list.slice(0,10)));
             const mySwiper3 = new Swiper('#swiper3',{
                 observer:true,
+                observeParents:true,
                 paginationClickable: true,
                 slidesPerView : 'auto',
             });

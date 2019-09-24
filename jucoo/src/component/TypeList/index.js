@@ -25,7 +25,7 @@ class TypeList extends React.Component{
                                         <p className={"typeList1-div2-2-p3"}>{v.list[0].city_name}|{v.list[0].venue_name}</p>
                                     </div>
                                 </div>
-                                <div className="swiper-container">
+                                <div className="swiper-container" id={"swiper"+v.cat_id}>
                                     <div className="swiper-wrapper typeList1-div3">
                                         {
                                             v.list.slice(1).map((v,i)=>(

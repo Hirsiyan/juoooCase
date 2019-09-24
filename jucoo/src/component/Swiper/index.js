@@ -45,15 +45,7 @@ class SwpCom extends React.Component{
         )
     }
     componentDidMount(){
-        const mySwiper1 = new Swiper('#swiper1',{
-            observer: true,
-            pagination: {
-                el: '.swiper-pagination',
-            },
-            autoplay: {
-                disableOnInteraction: false,
-            },
-        });
+
         this.props.getSwiperList();
         window.onload=function () {
             let iconfont  = document.getElementById("iconfont"),

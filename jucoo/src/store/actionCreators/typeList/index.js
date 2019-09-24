@@ -13,7 +13,7 @@ export default {
             const data = await axios.get("/juooo/home/index/getFloorShow?city_id=0&version=6.0.5&referer=2");
             console.log(data.data.data);
             dispatch(changeTypeList(data.data.data));
-            const mySwiper = new Swiper('swiper-container',{
+            const mySwiper = new Swiper('.swiper-container',{
                 observer:true,
                 observeParents:true,
                 slidesPerView : 3,
