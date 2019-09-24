@@ -47,6 +47,7 @@ class Search extends React.Component {
                                             </span>
                                         <span className={"del-icon"} onClick={() => {
                                             window.localStorage.removeItem("aKeyWords");
+                                            this.state.aKeyWords = ""
                                             this.setState({
                                                 aKeyWords:this.state.aKeyWords
                                             })
