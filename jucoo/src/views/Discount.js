@@ -10,7 +10,8 @@ class Discount extends React.Component{
         super();
         this.state= {
             CategoryList:[],
-            DiscountList:[]
+            DiscountList:[],
+            cityList:[]
         }
     }
     render() {
@@ -76,12 +77,26 @@ class Discount extends React.Component{
         });
         console.log(this.state.DiscountList)
     }
+    async getCity(){
+        const info = await axios.get("/juooo/city/city/getHotCityList?version=6.0.6&referer=2")
+        console.log(info.data)
+
+        this.setState({
+            cityList:info.data.data.hot_city_List
+        });
+        console.log(this.state.cityList)
+    }
 
     componentDidMount() {
+        this.getCity();
         this.getData();
         this.getDiscount();
         var swiper = new Swiper('.swiper-container', {
-            history: true,
+            observer:true,
+            observeParents:true,
+            slidesPerView : 3,
+            paginationClickable: true,
+            cancelable:false
         });
     }
 }
