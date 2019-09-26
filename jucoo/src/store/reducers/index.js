@@ -14,12 +14,9 @@ const reducer = combineReducers({
     changeCityList,
     changeAddressList,
     recommendList,
-<<<<<<< HEAD
-    loading,
-    changeDiscountList
-=======
+
     loading
 
->>>>>>> e3336a429bd259f7f36ab00c6df9b5318525fcbc
+
 });
 export default reducer;

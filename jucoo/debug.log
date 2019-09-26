@@ -1,0 +1,12 @@
+[0926/161236.615:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
+[0926/175558.421:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
+[0926/181702.962:ERROR:settings.cc(320)] Settings magic is not 1129342067
+[0926/181702.972:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0926/182706.778:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0926/182707.736:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0926/183203.002:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0926/184703.005:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0926/185404.946:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0926/191951.709:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0926/192403.242:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0926/192424.371:ERROR:http_transport_win.cc(276)] WinHttpSendRequest: 操作成功完成。 (0x0)
