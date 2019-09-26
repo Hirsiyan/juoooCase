@@ -58,30 +58,6 @@ app.post("/sendCode",async (req,res)=>{
     }
 });
 //登录
-app.post("/userLogin",async (req,res)=>{
-    let {phoneId,code} = req.body;
-    code = code/1;
-    const phoneInfo = await db.findOne("phoneCode",{
-        phoneId,
-        code
-    });
-    if(phoneInfo){
-        //存在，判断验证码是吗失效
-        if(Date.now()-phoneInfo.addTime>1000*60*60*24*365){
-            tools.json(res,-1,"验证码过期")
-        }else{
-            res.json({
-                ok:1,
-                msg:"登录成功",
-                phoneId,
-                token:tools.enToken({
-                    phoneId
-                })
-            })
-        }
-    }else tools.json(res,-1,"您输入的手机号或者验证码有误")
-});
-//登录
 app.post("/login",async (req,res)=>{
     let {phoneId,password} = req.body;
     let code = password/1;

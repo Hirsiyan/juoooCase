@@ -67,7 +67,7 @@ class SelectCity extends React.Component {
                                         arr.map((v,i)=>{
                                             return(
                                                 <div className={"city-block__row__con"} key={i}>
-                                                    <span className={"city-block__row__con__letter"}>{v.id}</span>
+                                                    <span className={"city-block__row__con__letter"} ref={el=>this[v.id]=el}>{v.id}</span>
                                                     {
                                                         v.list.map((m,i)=>(
                                                             <ul key={i} className={"city-block__row__con__wrap"}>
@@ -98,7 +98,7 @@ class SelectCity extends React.Component {
                         <span className={"city-nav__lab"}>热门</span>
                         {
                             arr.map((v,i)=>(
-                                <span className={"city-nav__lab"} key={i}>{v.id}</span>
+                                <span className={"city-nav__lab"} onClick={()=>this[v.id].scrollIntoView(true)} key={i}>{v.id}</span>
                             ))
                         }
 
@@ -107,9 +107,6 @@ class SelectCity extends React.Component {
 
             </>
         )
-    }
-    loction(){
-
     }
     componentDidMount() {
         this.props.getCityList();
