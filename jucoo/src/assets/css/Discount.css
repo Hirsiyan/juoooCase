@@ -20,6 +20,7 @@ body,html{
     height: 1.17333rem;
 }
 .title{
+    padding:0 10px 0 10px;
     height: 1.17333rem;
     width: 100%;
     background-color: #fff;
@@ -55,6 +56,7 @@ body,html{
     font-size: .4rem;
     margin-right: 2px;
     padding-top: 25px;
+
 }
 .whole{
     width:6.53333rem;
@@ -64,6 +66,8 @@ body,html{
     margin-right: .54667rem;
     border-bottom: .04rem solid #ff6743;
     color: #ff6743;
+    white-space: nowrap;
+    margin-top:15px;
 }
 .slide-tab-right{
     width:1.33333rem;
