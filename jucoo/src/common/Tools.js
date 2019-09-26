@@ -1,3 +1,4 @@
+
 class Tools {
     static date(v) {
         let arr=[];

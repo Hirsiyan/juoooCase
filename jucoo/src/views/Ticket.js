@@ -1,9 +1,7 @@
 import React from "react"
-import CustomerSerbice from "../component/CustomerService"
 import '../assets/css/Ticket.css'
 import axios from 'axios';
 import Tools from '../common/Tools'
-import Swiper from 'swiper';
 import Reminder from "./Reminder";
 import '../assets/fonts/iconfont.css'
 import CustomerService from "./CustomerService";
@@ -161,8 +159,8 @@ class Ticket extends React.Component{
             </div>
         )
     }
-    async getSchedule(){
-        const info = await axios.get("/juooo/Schedule/Schedule/getScheduleInfo?schedular_id=104216&version=6.0.5&referer=2")
+    async getSchedule(id){
+        const info = await axios.get("/juooo/Schedule/Schedule/getScheduleInfo?schedular_id="+id+"&version=6.0.5&referer=2")
         console.log(info.data.data);
         this.setState({
            // showData:[...this.state.showData,{...info.data.data.share_data,...info.data.data.static_data,...info.data.data.item_list[0]}]
@@ -193,7 +191,7 @@ class Ticket extends React.Component{
 
 
     componentDidMount() {
-    this.getSchedule();
+    this.getSchedule(this.props.match.params.id);
     this.getTourCity();
     this.getShowList();
 

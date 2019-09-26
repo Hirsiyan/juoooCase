@@ -44,10 +44,6 @@ class Super extends React.Component{
         )
     }
     componentDidMount(){
-        const mySwiper2 = new Swiper('#swiper2',{
-            observer: true,
-            loop:true
-        });
         this.props.getSuperList();
     }
 }

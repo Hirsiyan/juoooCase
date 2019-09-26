@@ -2,6 +2,7 @@ import React from "react"
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import typeList from "../../store/actionCreators/typeList"
+import {withRouter} from "react-router-dom"
 class TypeList extends React.Component{
     render(){
         const typeList = this.props.typeList;
@@ -14,7 +15,7 @@ class TypeList extends React.Component{
                                     <p className={"typeList1-div1-p1"}>{v.title}</p>
                                     <p className={"typeList1-div1-p2"}> > </p>
                                 </div>
-                                <div className={"typeList1-div2"}>
+                                <div className={"typeList1-div2"}  style={{background: 'rgb(163, 154, 113)'}}>
                                     <div className={"typeList1-div2-1"}>
                                         <img className={"typeList1-div2-1-img"} src={v.list[0].pic} alt=""/>
                                     </div>
@@ -24,11 +25,13 @@ class TypeList extends React.Component{
                                         <p className={"typeList1-div2-2-p3"}>{v.list[0].city_name}|{v.list[0].venue_name}</p>
                                     </div>
                                 </div>
-                                <div className="swiper-container">
-                                    <div className="swiper-wrapper">
+                                <div className="swiper-container" id={"swiper"+v.cat_id}>
+                                    <div className="swiper-wrapper typeList1-div3">
                                         {
                                             v.list.slice(1).map((v,i)=>(
-                                                <div className="swiper-slide swiper-slide-div1" key={i}>
+                                                <div className="swiper-slide swiper-slide-div1" key={i}  onClick={()=>{
+                                                    this.props.history.push("/ticket/"+v.url.slice(27))
+                                                }}>
                                                     <div className="swiper-slide-div1-div2">
                                                         <div className="swiper-slide-div1-div2a">
                                                             <img className="swiper-slide-div1-div2a-img" src={v.pic} alt=""/>
@@ -56,4 +59,4 @@ function mapStateToProps(state){
         typeList:state.typeList.typeList
     }
 }
-export default connect(mapStateToProps,dispatch=>bindActionCreators(typeList,dispatch))(TypeList)
+export default withRouter(connect(mapStateToProps,dispatch=>bindActionCreators(typeList,dispatch))(TypeList));

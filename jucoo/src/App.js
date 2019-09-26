@@ -9,13 +9,15 @@ import Myintegral from "./views/Myintegral";
 import Plus from "./views/Plus";
 import Search from "./views/Search";
 import CouponExchange from "./views/CouponExchange"
-
+import Ticket from "./views/Ticket"
+import Date from "./component/Date"
 import {
     BrowserRouter as Router,
     Switch,
     Route
 } from "react-router-dom"
 import SelectCity from "./views/SelectCity";
+import {Calendar} from "antd";
 class App extends React.Component{
     render(){
         return(
@@ -23,6 +25,8 @@ class App extends React.Component{
                <Router>
                    <ComRouter></ComRouter>
                    <Switch>
+                       <Route path={"/date"} component={Date}></Route>
+                       <Route path={"/ticket/:id"} component={Ticket}></Route>
                        <Route path={"/Search"} component={Search}></Route>
                        <Route path={"/SelectCity"} component={SelectCity}></Route>
                        <Route path={"/plus"} component={Plus}></Route>
