@@ -4,8 +4,6 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'lib-flexible';
-
-
 import {Provider} from "react-redux";
 import store from "./store";
 import "./assets/css/reset.css";

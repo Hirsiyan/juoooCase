@@ -333,6 +333,7 @@
     height:350px;
     background:rgba(35,35,35,.08);
     box-shadow:0rem 0.05333rem 0.4rem 0.2667rem rgba(35,35,35,.08);
+    margin-bottom:20px;
 }
 .vip-server-son-1{
     width:100%;
@@ -375,7 +376,7 @@
 }
 .vip-server-son-2a{
     width:32%;
-    height:170px;
+    height:200px;
     background:white;
     text-align:center;
     padding-top:10px;
