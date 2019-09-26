@@ -4,7 +4,7 @@ padding:0;
 }
 .mainColor{
     background:#efefef;
-    height:2050px;
+    height:2100px;
     width:100%;
 }
 .head{
@@ -158,7 +158,8 @@ padding:0;
     font-size:.34667rem;
 }
 .detail-schedule-discount i{
-    margin-left:150px;
+    margin-left:110px;
+    font-size:70px;
 }
 .detail-schedule-discount span{
     margin:0 20px;
@@ -189,7 +190,7 @@ padding:0;
 .tour-city{
     width:100%;
     height:1.58667rem;
-    line-height:1.58667rem;
+    line-height:1.38667rem;
     margin-top:25px;
     padding:0 15px 0 15px;
     background:#fff;
@@ -212,7 +213,7 @@ padding:0;
     overflow-y: hidden;
 }
 .tour-city-list-main{
-    height:1.65333rem;
+    height:1.75333rem;
     width:2.4rem;
     border:1px solid #ccc;
     border-radius:10px;
@@ -268,8 +269,8 @@ padding:0;
 .related-recommendations{
     height:1200px;
     background:#fff;
-    padding:20px 20px 0 20px;
-
+    padding:50px 20px 0 20px;
+    margin-top:20px;
 }
 .related-recommendations-main{
     /*background:gold;*/
@@ -306,7 +307,7 @@ padding:0;
     height: .32rem;
     line-height: .32rem;
     margin-left: .12rem;
-    vertical-align: bottom;
+
 
 }
 .related-recommendations-main-details h2{
@@ -355,14 +356,16 @@ padding:0;
     text-align: center;
     height:100px;
     float:left;
+    padding:5px 0;
 }
 .footer-main span{
     font-size:50px;
     display:block;
     margin-top:5px;
+    line-height:30px;
 }
 .footer-main p{
-    font-size:15px;
+    font-size:25px;
 
 }
 .footer-btn{

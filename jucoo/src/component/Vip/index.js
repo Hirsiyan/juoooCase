@@ -1,11 +1,14 @@
 import React from "react"
+import {withRouter} from "react-router-dom"
 class Vip extends React.Component{
     render(){
         return(
             <div className={"vip-server"}>
                 <div className={"vip-server-son"}>
                     <div className={"vip-server-son-1"}>
-                        <div className={"vip-server-son-1a"}>
+                        <div className={"vip-server-son-1a"} onClick={()=>{
+                            this.props.history.push("/plus")
+                        }}>
                             <div className={"vip-server-son-1a-1"}>
                                 <p className={"vip-server-son-1a-1-p"}>橙PLUS卡</p>
                                 <p>送<span style={{color:"#ff6743"}}>100元</span>,享V+权益</p>
@@ -32,7 +35,9 @@ class Vip extends React.Component{
                                 <img style={{width:"40px",height:"40px"}} src="https://image.juooo.com/group1/M00/02/63/rAoKmVyul4KAN4xIAAAGqNi5vq4366.png" alt=""/>
                             </p>
                         </div>
-                        <div className={"vip-server-son-2a"}>
+                        <div className={"vip-server-son-2a"} onClick={()=>{
+                            this.props.history.push("/date")
+                        }}>
                             <p className={"vip-server-son-1a-1-p"} id={"vip-server-son-1a-1-p"}>日历</p>
                             <p>演出信息，<span style={{color:"#ff6743"}}>一目了然</span></p>
                             <p style={{display:"flex",justifyContent:"center"}}>
@@ -52,4 +57,4 @@ class Vip extends React.Component{
         )
     }
 }
-export default Vip;
+export default withRouter(Vip);

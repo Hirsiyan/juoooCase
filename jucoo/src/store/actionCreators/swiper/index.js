@@ -29,24 +29,36 @@ export default {
     getSwiperList(){
         return async (dispatch)=>{
             const data = await axios.get("/juooo/home/index/getClassifyHome?city_id=0&abbreviation=&version=6.0.5&referer=2");
-            // console.log(data.data.data.slide_list)
             dispatch(changeSwiperList(data.data.data.slide_list));
+            const mySwiper1 = new Swiper('#swiper1',{
+                observer: true,
+                observeParents:true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                slidesPerView :1
+            })
         }
     },
     getSuperList(){
         return async (dispatch)=>{
             const data = await axios.get("/juooo/vip/index/getVipHomeSchedular?version=6.0.5&referer=2");
-            console.log(data.data.data.priorList);
-            dispatch(changeSuperList(data.data.data.priorList))
+            dispatch(changeSuperList(data.data.data.priorList));
+            const mySwiper2 = new Swiper('#swiper2',{
+                observer: true,
+                observeParents:true,
+                loop:true,
+                slidesPerView :1,
+            });
         }
     },
     getHotList(){
         return async (dispatch)=>{
             const data = await axios.get("/juooo/home/index/getHotsRecommendList?city_id=0&version=6.0.5&referer=2");
-            // console.log(data.data.data.hots_show_list.slice(0,10))
-            dispatch(changeHotList(data.data.data.hots_show_list.slice(0,10)))
+            dispatch(changeHotList(data.data.data.hots_show_list.slice(0,10)));
             const mySwiper3 = new Swiper('#swiper3',{
                 observer:true,
+                observeParents:true,
                 paginationClickable: true,
                 slidesPerView : 'auto',
             });
@@ -55,7 +67,6 @@ export default {
     getRepeatList(){
         return async (dispatch)=>{
             const data = await axios.get("/juooo/home/index/getTourRecommendList?city_id=0&version=6.0.5&referer=2");
-            // console.log(data.data.data.tour_show_list)
             dispatch(changeRepeatList(data.data.data.tour_show_list.slice(0,6)));
                 const mySwiper4 = new Swiper('#swiper4',{
                     observer:true,
