@@ -1,12 +1,41 @@
-.discount-box{
+.Discount_box_1{
     width:550px;
     height: 200px;
-    background: #0086b3;
-    margin-top: 20px;
+    padding-top: 20px;
 }
-.city-box{
+.ZK{
+    font-size: .32rem;
+    color:#7e8c8d;
+    margin-left: 10px;
+}
+.discount-box{
+    float: left;
+    /*background-color: #fff1e9;*/
+    /*color: #ff6743;*/
+    width: 2.25333rem;
+    height: .86667rem;
+    background-color: #f5f5f5;
+    border-radius: .08rem;
+    line-height: .86667rem;
+    text-align: center;
+    color: #232323;
+    font-size: .32rem;
+    margin-bottom: .16rem;
+    padding: 0 .13333rem;
+    margin-left: 10px;
+}
+.CS{
+    font-size: .32rem;
+    color:#7e8c8d;
+    margin-left: 10px;
+}
+.city-box_1{
     width:550px;
     height: 1250px;
     background: #55a532;
     margin-top: 20px;
 }
+.city-box{
+
+}
+

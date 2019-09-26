@@ -36,7 +36,10 @@ export default {
                 pagination: {
                     el: '.swiper-pagination',
                 },
-                slidesPerView :1
+                autoplay: {
+                    disableOnInteraction: true, //手动滑动之后不打断播放
+                    delay: 2000
+                },
             })
         }
     },
@@ -47,8 +50,11 @@ export default {
             const mySwiper2 = new Swiper('#swiper2',{
                 observer: true,
                 observeParents:true,
-                loop:true,
                 slidesPerView :1,
+                autoplay: {
+                    disableOnInteraction: true, //手动滑动之后不打断播放
+                    delay: 2000
+                },
             });
         }
     },

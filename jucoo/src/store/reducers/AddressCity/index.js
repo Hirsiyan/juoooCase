@@ -5,5 +5,6 @@ export function changeAddressList(state=stateInit,{type,payload}) {
     if(type===CHANGE_ADDRESS_LIST){
         state.addressList=payload
     }
+
     return state
 }
