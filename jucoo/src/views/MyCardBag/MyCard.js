@@ -1,8 +1,4 @@
 import React from "react"
-<<<<<<< HEAD
-
-=======
->>>>>>> b8f7336d2f53231ff4cf66625b301ea03654f3c8
 import "../../assets/css/MyCardBag/CardSon.css"
 import MyCardMain from "./MyCardMain";
 import GetBack from "./getBack";

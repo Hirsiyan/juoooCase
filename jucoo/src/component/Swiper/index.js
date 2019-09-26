@@ -1,5 +1,4 @@
 import React from "react"
-import Swiper from "swiper/dist/js/swiper.js";
 import {connect} from "react-redux"
 import {bindActionCreators} from "redux"
 import swiperListActions from "../../store/actionCreators/swiper"
@@ -32,8 +31,8 @@ class SwpCom extends React.Component{
                         <div className="swiper-wrapper">
                             {
                                 swiperList.map((v,i)=>(
-                                    <div key={i} className={"swiper-slide"}>
-                                        <a href={v.url}><img src={v.image_url} alt="" className={"swiper-container-img"}/></a>
+                                    <div key={i} className={"swiper-slide"} id={"swiper1a"}>
+                                        <a href={v.url}><img src={v.image_url} alt="" className={"swiper-container-img1"}/></a>
                                     </div>
                                 ))
                             }

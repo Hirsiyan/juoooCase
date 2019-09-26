@@ -98,6 +98,7 @@
     width:100%;
     height:450px;
 }
+/*swiper*/
 .swiper-container{
     width:100%;
     height:400px;
@@ -105,6 +106,14 @@
 .swiper-slide-div1{
     width:230px;
     height:400px;
+}
+#swiper1a{
+    height:400px;
+    margin-top:-22px
+}
+swiper-container-img1{
+    width:100%;
+    height:100%;
 }
 .swiper-slide-div1-div1{
     width:100%;
@@ -172,8 +181,7 @@
 }
 .swiper-list{
     width:100%;
-    height:380px;
-    background:red;
+    height:400px;
     position:relative;
 }
 .swiper-list-postion{
