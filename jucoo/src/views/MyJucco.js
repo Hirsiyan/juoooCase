@@ -1,5 +1,6 @@
 import React from "react"
 import "../assets/css/MyJucco.css"
+import axios from "axios"
 import {Link} from "react-router-dom"
 class MyJucco extends React.Component{
     render(){
@@ -17,7 +18,7 @@ class MyJucco extends React.Component{
                                         <div className={"mine-info_head_pic"}>
                                             <img src="https://image.juooo.com/group1/M00/03/6F/rAoKNV0XF2uABEtSAAANUrP00o0602.png" alt=""/>
                                         </div>
-                                        <span className={"mine-info_userName"}>账户</span>
+                                        <span className={"mine-info_userName"}>{localStorage.phoneId}</span>
                                         <span className={"mine-info_ID"}>ID:123456</span>
                                     </div>
                                     <div className={"mine-info_main_label"}>
@@ -26,7 +27,7 @@ class MyJucco extends React.Component{
                                     <div className={"mine-info_main_cnt"}>
                                         <Link to={"/mymoney"} className={"mine-info_main_cnt_item"}>
                                                     <p className={"mine-info_main_cnt_item_num"}>
-                                                        0
+                                                        200
                                                     </p>
                                                     <p className={"mine-info_main_cnt_item_name"}>
                                                         账户余额
@@ -44,7 +45,7 @@ class MyJucco extends React.Component{
                                         </Link>
 
                                         <Link to={"/couponExchange"} className={"mine-info_main_cnt_item"}>
-                                            <p className={"mine-info_main_cnt_item_num"}>0</p>
+                                            <p className={"mine-info_main_cnt_item_num"}>9</p>
                                             <p className={"mine-info_main_cnt_item_name"}>优惠券</p>
                                             <div className={"separator"}></div>
                                         </Link>
@@ -123,6 +124,17 @@ class MyJucco extends React.Component{
                       </div>
                 </div>
         )
+    }
+    componentWillMount() {
+        console.log(this.props.location.pathname);
+        if(!localStorage.token){
+            this.props.history.push({
+                pathname:"/login",
+                state:{
+                    goUrl:this.props.location.pathname
+                }
+            })
+        }
     }
 }
 export default MyJucco;
