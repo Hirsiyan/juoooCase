@@ -18,7 +18,7 @@ body{
 }
 .show-nav{
     width:100%;
-    background:green;
+    /*background:green;*/
     padding:25px;
     height:100px;
     font-size:30px;
@@ -39,4 +39,76 @@ body{
 }
 .show-address i{
     font-size:30px;
+}
+
+
+
+
+.show-main-Search{
+    padding-left:20px;
+}
+.show-main-Search-discount__item{
+    padding-left: .4rem;
+    padding-right: .4rem;
+    background-color: #fefefe;
+    margin-bottom: .32rem;
+
+}
+.show-main-Search-exclusive-card{
+    position: relative;
+    padding: .53333rem 0;
+}
+.show-main-Search-item_exclusive-card__base{
+    width:9.2rem;
+    margin-top: 25px;
+}
+.show-main-Search-pic{
+    background: #55a532;
+    width:3rem;
+    height: 4rem;
+}
+.show-main-Search-item__info{
+    float: right;
+    width:5rem;
+    height: 4rem;
+    margin-right: 50px;
+    padding-top: 15px;
+}
+.show-main-Search-item__info__date-week{
+    width:5rem;
+    height: .7rem;
+    display: inline-block;
+    font-weight: 700;
+    line-height: .42667rem;
+    font-size: .42667rem;
+}
+.show-main-Search-item_info_name{
+    width:5rem;
+    height:1.7rem;
+    font-size: .393rem;
+    font-weight: 900;
+    color: #232323;
+    line-height: .61333rem;
+    overflow: hidden;
+}
+.show-main-Search-item_info_place{
+    width:5rem;
+    height:.7rem;
+    color: #666;
+    line-height: .5rem;
+
+}
+.show-main-Search-exclusive-card__extra-wrapper{
+    width:5rem;
+    height:.9rem;
+    color: #ff6743;
+    font-size: .42667rem;
+    padding-top: 15px;
+}
+.show-main-Search-discount__item__bottom{
+    width:9rem;
+    height:.9rem;
+    color: #ff6743;
+    padding-left: 7rem;
+
 }
