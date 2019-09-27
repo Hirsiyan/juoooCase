@@ -11,6 +11,7 @@ import Search from "./views/Search";
 import CouponExchange from "./views/CouponExchange"
 import Ticket from "./views/Ticket"
 import Date from "./component/Date"
+import Show from "./views/Show"
 import {
     BrowserRouter as Router,
     Switch,
@@ -25,6 +26,7 @@ class App extends React.Component{
                <Router>
                    <ComRouter></ComRouter>
                    <Switch>
+                       <Route path={"/show"} component={Show}></Route>
                        <Route path={"/date"} component={Date}></Route>
                        <Route path={"/ticket/:id"} component={Ticket}></Route>
                        <Route path={"/Search"} component={Search}></Route>
