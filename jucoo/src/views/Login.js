@@ -79,7 +79,8 @@ class Login extends React.Component{
                 });
                 console.log(data);
                 localStorage.token = data.token;
-                _this.props.history.push("/Eticket");
+                localStorage.phoneId = data.phoneId;
+                _this.props.history.push(_this.props.history.location.state.goUrl);
             }else{
                 alert("请输入用户名或者密码")
             }

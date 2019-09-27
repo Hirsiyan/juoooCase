@@ -1,4 +1,9 @@
 import React from 'react'
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> da8f004ba5ead0f0101b9c4e98a5af3e4f42b881
 import '../../assets/css/MyCardBag/BuyCardMain.css'
 import CardSwiper from "../../component/MyCardBag/CardSwiper";
 
