@@ -17,7 +17,9 @@ class Vip extends React.Component{
                                 <img style={{width:"50%",height:"50%"}} src="https://image.juooo.com/group1/M00/02/D0/rAoKmV0jZBGAD_e4AAAE27hwBgs927.png" alt=""/>
                             </div>
                         </div>
-                        <div className={"vip-server-son-1a"}>
+                        <div className={"vip-server-son-1a"}  onClick={()=>{
+                            this.props.history.push("/plus")
+                        }}>
                             <div className={"vip-server-son-1a-1"}>
                                 <p className={"vip-server-son-1a-1-p"}>VIP+专区</p>
                                 <p>尊享<span style={{color:"#ff6743"}}>10</span>大权益</p>
@@ -28,7 +30,9 @@ class Vip extends React.Component{
                         </div>
                     </div>
                     <div className={"vip-server-son-2"}>
-                        <div className={"vip-server-son-2a"}>
+                        <div className={"vip-server-son-2a"}  onClick={()=>{
+                            this.props.history.push("/plus")
+                        }}>
                             <p className={"vip-server-son-1a-1-p"}>积分商城</p>
                             <p>用积分，<span style={{color:"#ff6743"}}>0元</span>购票</p>
                             <p style={{display:"flex",justifyContent:"center"}}>
@@ -44,7 +48,9 @@ class Vip extends React.Component{
                                 <img style={{width:"40px",height:"30px"}} src="https://image.juooo.com/group1/M00/02/63/rAoKmVyul4KAN4xIAAAGqNi5vq4366.png" alt=""/>
                             </p>
                         </div>
-                        <div className={"vip-server-son-2a"}>
+                        <div className={"vip-server-son-2a"}  onClick={()=>{
+                            this.props.history.push("/plus")
+                        }}>
                             <p className={"vip-server-son-1a-1-p"}>欢聚橙卡</p>
                             <p><span style={{color:"#ff6743"}}>33元</span>看演出</p>
                             <p style={{display:"flex",justifyContent:"center"}}>
