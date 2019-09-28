@@ -13,9 +13,6 @@ const RadioGroup = Radio.Group;
 class AddressDrawer extends React.Component{
      constructor(props){
          super(props);
-         this.state = {
-             index: 0,
-         };
      }
     state = { visible: false, placement: 'right' };
 

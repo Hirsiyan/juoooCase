@@ -26,6 +26,10 @@ class Home extends React.Component{
             </div>
         )
     }
+    componentDidMount() {
+
+    }
 }
+
 
 export default Home;

@@ -6,7 +6,9 @@ import changeSelec from "../store/actionCreators/selectCity"
 import {Link} from "react-router-dom"
 class SelectCity extends React.Component {
     state={
-        city:"全国"
+        city:"全国",
+        // cityChina:JSON.parse(localStorage.name)
+
     }
     render() {
         let arr = [];
@@ -31,7 +33,7 @@ class SelectCity extends React.Component {
                                     <span className={"city-block__con__tip"}>当前城市</span>
                                     <ul className={"city-block__con__wrap"}>
                                         <li className={"city-block__con__item"}>
-                                            {localStorage.China?JSON.parse(localStorage.China):JSON.parse(localStorage.name).name}
+                                            {JSON.parse(localStorage.name) || "全国"}
                                             </li>
                                     </ul>
                                 </div>
@@ -46,15 +48,15 @@ class SelectCity extends React.Component {
 
                                     <ul className={"city-block__con__wrap"}>
                                         <li className={"city-block__con__item hots--item"} onClick={()=>{
-                                            localStorage.China = JSON.stringify("全国");
-                                            localStorage.removeItem("name");
+                                            // localStorage.China = JSON.stringify("全国");
+                                            // localStorage.removeItem("name");
                                             this.props.history.push("/");
                                         }}>全国</li>
                                         {
                                             this.props.cityList.map(v => (
                                                 <li className={"city-block__con__item hots--item"} key={v.id} onClick={()=>{
-                                                    localStorage.name=JSON.stringify(v);
-                                                    localStorage.removeItem("China");
+                                                    localStorage.name=JSON.stringify(v.name);
+                                                    // localStorage.removeItem("China");
                                                     this.props.history.push("/");
                                                 }}>{v.name}</li>
                                             ))
@@ -72,8 +74,8 @@ class SelectCity extends React.Component {
                                                         v.list.map((m,i)=>(
                                                             <ul key={i} className={"city-block__row__con__wrap"}>
                                                                 <li className={"city-block__row__con__column"} onClick={()=>{
-                                                                    localStorage.name=JSON.stringify(m);
-                                                                    localStorage.removeItem("China");
+                                                                    localStorage.name=JSON.stringify(m.name);
+                                                                    // localStorage.removeItem("China");
                                                                     this.props.history.push("/");
 
                                                                 }}>

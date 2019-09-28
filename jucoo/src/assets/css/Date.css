@@ -17,7 +17,7 @@
 #spird{
     width: 660.12px;
     display: flex;
-    white-space: nowrap
+    white-space: nowrap;
 }
 .i-item{
     flex:1;

@@ -2,6 +2,7 @@ import React from "react"
 import Swiper from "swiper/dist/js/swiper.js";
 import axios from "axios"
 import "../../assets/css/Date.css"
+import AddressDrawer from "../AddressDrawer";
 class Date extends React.Component{
     constructor(){
         super();
@@ -34,25 +35,27 @@ class Date extends React.Component{
                         </div>
                     </div>
                 </div>
-                <div className={"swiper-container "} id={"spir"}>
-                    <div className={"swiper-wrapper"}id={"spird"}>
-                            <div className="i-item">全部</div>
-                            {
-                                this.state.CategoryList.map((v,i)=>(
-                                    <div className="swiper-slide i-item" data-history="slide1" key={i}>{v.name}</div>
-                                ))
-                            }
-
-
+                <div>
+                    <div className={"swiper-container "} id={"spir"}>
+                           <div className={"swiper-wrapper"}id={"spird"}>
+                                    <div className="i-item">全部</div>
+                                    {
+                                        this.state.CategoryList.map((v,i)=>(
+                                            <div className="swiper-slide i-item" data-history="slide1" key={i}>{v.name}</div>
+                                        ))
+                                    }
+                           </div>
+                    </div>
+                    <div className="show-address">
+                        <span>
+                             <i className="iconfont icon-shouhuodizhi"></i>
+                        </span>
 
                     </div>
                 </div>
-                <div className={"city_wrap"}>
-                                <span className={"city"}>
-                                    广州
-                                </span>
-                    <span className={"city_icon"}></span>
-                </div>
+
+
+
             </div>
 
         )
@@ -64,10 +67,6 @@ class Date extends React.Component{
             CategoryList:data.data
         })
     }
-    componentWillUpdate(nextProps, nextState, nextContext) {
-
-    }
-
     componentDidMount() {
         setTimeout(()=>{
             const mySwiper8 = new Swiper('.swiper-container',{

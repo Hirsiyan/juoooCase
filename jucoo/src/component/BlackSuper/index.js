@@ -1,4 +1,5 @@
 import React from "react"
+import {withRouter} from "react-router-dom"
 class BlackSuper extends React.Component{
     render(){
         return(
@@ -17,7 +18,9 @@ class BlackSuper extends React.Component{
                     </div>
                     <div className={"black-super-son-2"}>
                         <div className={"black-super-son-2-1"}>
-                            <div className={"black-super-son-2-1-1"}>
+                            <div className={"black-super-son-2-1-1"} onClick={()=>{
+                                this.props.history.push("/discount")
+        }}>
                                 <span className={"black-super-son-2-1-1-span1"}>专享折扣</span>
                                 <span className={'black-super-son-2-1-1-span2'}> > </span>
                             </div>
@@ -60,4 +63,4 @@ class BlackSuper extends React.Component{
         )
     }
 }
-export default BlackSuper;
+export default withRouter(BlackSuper);

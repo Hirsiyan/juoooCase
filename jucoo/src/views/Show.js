@@ -49,13 +49,6 @@ class Show extends React.Component{
 
                 </div>
                 <div className="show-main-list-info">
-                    {/*{*/}
-                    {/*    this.state.showSearch.map((v,i)=>(*/}
-                    {/*        <div className="show-main-Search" key={i}>*/}
-
-                    {/*        </div>*/}
-                    {/*    ))*/}
-                    {/*}*/}
                     { this.state.showSearch.map((v,i)=>(
                     <div key={i} className={"show-main-Search"}>
                         <img className={"show-main-Search-pic"} src={v.pic}/>

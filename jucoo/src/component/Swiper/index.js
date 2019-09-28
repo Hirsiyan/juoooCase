@@ -15,7 +15,7 @@ class SwpCom extends React.Component{
                                 this.props.history.push("/SelectCity")
                             }}>
                                 <span className={"iconfont icon-location"} id={"iconfont"}></span>
-                                {localStorage.name?JSON.parse(localStorage.name).name:JSON.parse(localStorage.China)}
+                                {localStorage.name?JSON.parse(localStorage.name):"全国"}
                             </div>
                             <div className={"swiper-list-postion-son-b"} id={"search"} onClick={()=>{
                                 this.props.history.push("/Search")
